@@ -1,0 +1,27 @@
+# Claude Code local settings
+.claude/
+
+# Large data files
+nigeria_polling_units.csv
+
+# Downloaded images — too large for git
+training_data/images/
+training_data_test/images/
+training_data_ocr_test/images/
+
+# OCR output CSVs — regenerable, can be large
+training_data/ocr_results.csv
+training_data/party_votes.csv
+training_data/annotations_full.csv
+training_data_ocr_test/
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Surya output
+surya_results/
