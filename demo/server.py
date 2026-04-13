@@ -224,10 +224,16 @@ def submit():
 
     try:
         extraction = extract_with_claude(image_bytes)
-    except json.JSONDecodeError as e:
-        return jsonify({"error": f"Could not parse Claude response: {e}"}), 500
+    except json.JSONDecodeError:
+        return jsonify({"error": "Could not read the form — try a clearer photo."}), 500
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        # Log internally but never expose raw exception text to the client
+        import logging
+        logging.exception("Extraction error")
+        msg = str(e).lower()
+        if "api_key" in msg or "authentication" in msg or "401" in msg:
+            return jsonify({"error": "Service configuration issue — contact the demo organiser."}), 500
+        return jsonify({"error": "Verification failed — please retake and try again."}), 500
 
     parties = extraction.get("parties", {})
     flags   = extraction.get("flags",   {})

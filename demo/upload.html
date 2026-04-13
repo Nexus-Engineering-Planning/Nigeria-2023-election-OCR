@@ -221,7 +221,7 @@
       const mb = (file.size / 1024 / 1024).toFixed(1);
       const statusEl = document.getElementById('status');
       statusEl.className   = 'status error';
-      statusEl.textContent = `⚠ Photo is ${mb} MB — please use a compressed or lower-resolution shot (under ${MAX_MB} MB)`;
+      statusEl.textContent = `Photo is ${mb} MB — please use a lower-resolution shot (under ${MAX_MB} MB).`;
       document.getElementById('file-input').value = '';
       return;
     }
@@ -259,7 +259,7 @@
     const statusEl  = document.getElementById('status');
     submitBtn.disabled = true;
     statusEl.className = 'status loading';
-    statusEl.innerHTML = '<span class="spin">⟳</span> Extracting with Claude Vision…';
+    statusEl.innerHTML = '<span class="spin">⟳</span> Scanning form…';
 
     const form = new FormData();
     form.append('image', selectedFile);
@@ -275,8 +275,17 @@
 
       if (data.error) {
         statusEl.className   = 'status error';
-        statusEl.textContent = '⚠ ' + data.error;
-        submitBtn.disabled   = false;
+        // Show user-friendly messages — never expose raw server/API details
+        const msg = data.error.toLowerCase();
+        statusEl.textContent =
+          msg.includes('too small') || msg.includes('empty')
+            ? 'Image looks blank — please retake the photo.'
+            : msg.includes('too large') || msg.includes('15 mb')
+            ? 'Photo is too large — please use a lower-resolution shot.'
+            : msg.includes('parse') || msg.includes('json')
+            ? 'Could not read the form — try a clearer photo.'
+            : 'Verification failed — please retake and try again.';
+        submitBtn.disabled = false;
         return;
       }
 
@@ -295,8 +304,8 @@
       clearTimeout(timer);
       statusEl.className   = 'status error';
       statusEl.textContent = err.name === 'AbortError'
-        ? '⚠ Taking too long — please try again'
-        : '⚠ Network error — please try again';
+        ? 'Taking too long — please try again.'
+        : 'Connection error — please try again.';
       submitBtn.disabled   = false;
     }
   }
