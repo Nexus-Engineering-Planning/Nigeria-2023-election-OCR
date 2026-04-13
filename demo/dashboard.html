@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E Don Kast — Live Dashboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --teal:      oklch(0.6333 0.1128 178.7);
+    --teal-dim:  oklch(0.6333 0.1128 178.7 / 0.10);
+    --teal-mid:  oklch(0.6333 0.1128 178.7 / 0.20);
+    --orange:    #fb923c;
+    --bg:        #0a1628;
+    --card:      #162032;
+    --border:    #1e3050;
+    --slate:     #8899aa;
+    --red:       #f87171;
+    --red-bg:    rgba(30,6,6,0.8);
+    --red-border: #ef4444;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: #fff;
+    min-height: 100vh;
+    padding: 28px 32px;
+  }
+
+  /* ── Header ── */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+  .logo-area { display: flex; align-items: center; gap: 12px; }
+  .logo-area img { width: 40px; height: 40px; }
+  .logo-text { font-size: 28px; font-weight: 900; color: var(--teal); }
+  .ward-info { font-size: 13px; color: var(--slate); margin-top: 2px; }
+
+  .live-badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: .06em;
+  }
+  .live-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--teal);
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.8); }
+  }
+
+  .reset-btn {
+    margin-left: 16px;
+    font-size: 12px;
+    color: var(--slate);
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color .15s;
+  }
+  .reset-btn:hover { color: #fff; }
+
+  /* ── Counter grid ── */
+  .counters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .counter-card {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px;
+    text-align: center;
+  }
+  .counter-num {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .counter-label {
+    font-size: 11px;
+    color: var(--slate);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 600;
+  }
+  .teal   { color: var(--teal); }
+  .orange { color: var(--orange); }
+
+  /* ── Comparison table ── */
+  .comparison {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #e2eaf4;
+  }
+  .comp-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .comp-row:last-child { border-bottom: none; }
+  .comp-row.header-row { padding: 0 0 10px; }
+  .comp-label { font-size: 14px; color: #c8d8e8; }
+  .comp-vals { display: flex; gap: 48px; }
+  .comp-val { text-align: right; min-width: 80px; }
+  .comp-val .val-label { font-size: 10px; color: var(--slate); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 2px; }
+  .comp-val .val-num { font-size: 22px; font-weight: 800; }
+
+  /* ── Discrepancy box ── */
+  .discrepancy {
+    background: var(--red-bg);
+    border: 2px solid var(--red-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    display: none;
+  }
+  .discrepancy.visible { display: block; }
+  .disc-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--red);
+    margin-bottom: 14px;
+  }
+  .disc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .disc-item .disc-label { font-size: 11px; color: rgba(248,113,113,.6); margin-bottom: 4px; text-transform: uppercase; letter-spacing: .07em; }
+  .disc-item .disc-val { font-size: 28px; font-weight: 900; color: #fca5a5; }
+  .disc-source { font-size: 11px; color: rgba(248,113,113,.4); margin-top: 12px; }
+
+  /* ── Submissions feed ── */
+  .feed {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px 24px;
+  }
+  .feed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+  .feed-count { font-size: 12px; color: var(--slate); font-weight: 500; }
+
+  .feed-table-head {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--slate);
+    font-weight: 600;
+  }
+  .feed-table-head .cols { display: flex; gap: 40px; }
+
+  .feed-empty {
+    text-align: center;
+    color: var(--slate);
+    font-size: 14px;
+    padding: 32px 0;
+  }
+
+  .feed-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    animation: slideIn .35s ease;
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .feed-item:last-child { border-bottom: none; }
+  .feed-pu { color: #c8d8e8; }
+  .feed-flags { font-size: 11px; color: var(--slate); margin-top: 2px; }
+  .feed-cols { display: flex; gap: 40px; align-items: center; }
+  .feed-lp  { font-weight: 700; color: var(--teal);   min-width: 36px; text-align: right; }
+  .feed-apc { font-weight: 700; color: var(--orange); min-width: 36px; text-align: right; }
+  .quality-good { color: #34d399; font-size: 11px; min-width: 68px; text-align: right; }
+  .quality-poor { color: #fbbf24; font-size: 11px; min-width: 68px; text-align: right; }
+  .quality-bad  { color: var(--red); font-size: 11px; min-width: 68px; text-align: right; }
+
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: rgba(136,153,170,.35);
+    margin-top: 24px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+  <div class="logo-area">
+    <img src="/static/edk-logo.svg" alt="E Don Kast" onerror="this.style.display='none'">
+    <div>
+      <div class="logo-text">E Don Kast</div>
+      <div class="ward-info" id="ward-info">Ward 4 · Obio-Akpor · Rivers State · Live Demo</div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center">
+    <div class="live-badge">
+      <span class="live-dot"></span>
+      LIVE
+    </div>
+    <button class="reset-btn" onclick="resetDemo()">Reset</button>
+  </div>
+</header>
+
+<!-- ── Counters ── -->
+<div class="counters">
+  <div class="counter-card">
+    <div class="counter-num" id="count">0</div>
+    <div class="counter-label">Forms Submitted</div>
+  </div>
+  <div class="counter-card">
+    <div class="counter-num teal" id="lp-total">0</div>
+    <div class="counter-label">LP Votes (EC8A)</div>
+  </div>
+  <div class="counter-card">
+    <div class="counter-num orange" id="apc-total">0</div>
+    <div class="counter-label">APC Votes (EC8A)</div>
+  </div>
+</div>
+
+<!-- ── Comparison ── -->
+<div class="comparison">
+  <div class="section-title">EC8A Forms vs. INEC Declared — Obio-Akpor LGA</div>
+  <div class="comp-row header-row">
+    <span style="font-size:10px;color:var(--slate);text-transform:uppercase;letter-spacing:.1em">Source</span>
+    <div class="comp-vals">
+      <div class="comp-val"><div class="val-label teal">LP Votes</div></div>
+      <div class="comp-val"><div class="val-label orange">APC Votes</div></div>
+    </div>
+  </div>
+  <div class="comp-row">
+    <div class="comp-label">📋 EC8A Forms (audience-reconstructed)</div>
+    <div class="comp-vals">
+      <div class="comp-val"><div class="val-num teal" id="ec8a-lp">68,521</div></div>
+      <div class="comp-val"><div class="val-num orange" id="ec8a-apc">16,980</div></div>
+    </div>
+  </div>
+  <div class="comp-row">
+    <div class="comp-label">🏛 INEC Official Declared Result</div>
+    <div class="comp-vals">
+      <div class="comp-val"><div class="val-num teal">3,829</div></div>
+      <div class="comp-val"><div class="val-num orange">80,239</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Discrepancy ── -->
+<div class="discrepancy" id="disc-box">
+  <div class="disc-title">⚠ Discrepancy Detected</div>
+  <div class="disc-grid">
+    <div class="disc-item">
+      <div class="disc-label">LP votes unaccounted for</div>
+      <div class="disc-val">−64,692</div>
+    </div>
+    <div class="disc-item">
+      <div class="disc-label">APC votes not on EC8A forms</div>
+      <div class="disc-val">+63,259</div>
+    </div>
+  </div>
+  <div class="disc-source">
+    Source: CCIJ / Veza News — 169,000+ EC8A forms vs. INEC official LGA declaration
+  </div>
+</div>
+
+<!-- ── Feed ── -->
+<div class="feed">
+  <div class="feed-header">
+    <div class="section-title" style="margin:0">Incoming Submissions</div>
+    <div class="feed-count" id="feed-count"></div>
+  </div>
+  <div class="feed-table-head">
+    <span>Polling Unit</span>
+    <div class="cols"><span>LP</span><span>APC</span><span>Quality</span></div>
+  </div>
+  <div id="feed-list">
+    <div class="feed-empty">Waiting for submissions — audience members scan the QR code and photograph their form.</div>
+  </div>
+</div>
+
+<div class="footer">
+  ADC 2026 Hackathon &nbsp;·&nbsp; Track 3: Checks, Accountability & Judicial Independence &nbsp;·&nbsp; Team 16 &nbsp;·&nbsp; E Don Kast / StayGIS
+</div>
+
+<script>
+  const fmt = n => Number(n).toLocaleString();
+  let knownIds = new Set();
+  let discShown = false;
+
+  async function poll() {
+    try {
+      const res  = await fetch('/results');
+      const data = await res.json();
+
+      const { results, count, totals, ground_truth: gt } = data;
+
+      // Counters
+      document.getElementById('count').textContent     = count;
+      document.getElementById('lp-total').textContent  = fmt(totals.lp);
+      document.getElementById('apc-total').textContent = fmt(totals.apc);
+
+      // Comparison row (static ground truth from server)
+      document.getElementById('ec8a-lp').textContent  = fmt(gt.ec8a_lga.lp);
+      document.getElementById('ec8a-apc').textContent = fmt(gt.ec8a_lga.apc);
+
+      // Discrepancy — show after 3 submissions
+      if (count >= 3 && !discShown) {
+        document.getElementById('disc-box').classList.add('visible');
+        discShown = true;
+      }
+
+      // Feed — prepend new items
+      const newResults = results.filter(r => !knownIds.has(r.id));
+      if (newResults.length > 0) {
+        const list = document.getElementById('feed-list');
+
+        // Clear empty state
+        const empty = list.querySelector('.feed-empty');
+        if (empty) empty.remove();
+
+        newResults.reverse().forEach(r => {
+          knownIds.add(r.id);
+          const qualityClass =
+            r.quality === 'good'       ? 'quality-good' :
+            r.quality === 'poor'       ? 'quality-poor' : 'quality-bad';
+
+          const div = document.createElement('div');
+          div.className = 'feed-item';
+          div.innerHTML = `
+            <div>
+              <div class="feed-pu">${r.polling_unit || r.pu_code || 'Unknown PU'}</div>
+              ${r.flags ? `<div class="feed-flags">${r.flags}</div>` : ''}
+            </div>
+            <div class="feed-cols">
+              <span class="feed-lp">${r.lp ?? '—'}</span>
+              <span class="feed-apc">${r.apc ?? '—'}</span>
+              <span class="${qualityClass}">${r.quality}</span>
+            </div>`;
+          list.prepend(div);
+        });
+
+        document.getElementById('feed-count').textContent =
+          `(${count} form${count !== 1 ? 's' : ''} received)`;
+      }
+
+    } catch(e) { console.error(e); }
+
+    setTimeout(poll, 2000);
+  }
+
+  async function resetDemo() {
+    if (!confirm('Clear all demo results?')) return;
+    await fetch('/reset', { method: 'POST' });
+    knownIds  = new Set();
+    discShown = false;
+    document.getElementById('count').textContent     = '0';
+    document.getElementById('lp-total').textContent  = '0';
+    document.getElementById('apc-total').textContent = '0';
+    document.getElementById('disc-box').classList.remove('visible');
+    document.getElementById('feed-count').textContent = '';
+    document.getElementById('feed-list').innerHTML =
+      '<div class="feed-empty">Waiting for submissions…</div>';
+  }
+
+  poll();
+</script>
+</body>
+</html>

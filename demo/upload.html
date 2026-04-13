@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>E Don Kast — Scan Your Form</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --teal:     oklch(0.6333 0.1128 178.7);
+    --teal-dim: oklch(0.6333 0.1128 178.7 / 0.12);
+    --bg:       #0a1628;
+    --card:     #162032;
+    --slate:    #8899aa;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: #fff;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 20px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* ── Header ── */
+  .header { text-align: center; margin-bottom: 28px; }
+  .logo-wrap { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 6px; }
+  .logo-wrap img { width: 36px; height: 36px; }
+  .logo-text { font-size: 24px; font-weight: 800; color: var(--teal); }
+  .subtitle { color: var(--slate); font-size: 13px; }
+
+  /* ── Card ── */
+  .card {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 28px 22px;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .ward-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--teal-dim);
+    color: var(--teal);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+  .ward-tag .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+  }
+
+  h2 { font-size: 19px; font-weight: 700; margin-bottom: 6px; line-height: 1.3; }
+  .hint { color: var(--slate); font-size: 13px; margin-bottom: 22px; }
+
+  input[type=file] { display: none; }
+
+  .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 16px;
+    background: var(--teal);
+    color: #0a1628;
+    border: none;
+    border-radius: 14px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity .15s;
+    font-family: inherit;
+  }
+  .btn-primary:active { opacity: 0.82; }
+  .btn-primary:disabled { opacity: 0.55; cursor: default; }
+
+  .btn-blue {
+    background: #1a7af4;
+    color: #fff;
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--slate);
+    border: 1px solid #2a3f55;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 8px;
+  }
+
+  #preview {
+    display: none;
+    width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: #0d1a2a;
+  }
+
+  /* ── Status / result ── */
+  .status { min-height: 22px; text-align: center; font-size: 14px; margin-top: 14px; }
+  .status.loading { color: var(--teal); }
+  .status.error   { color: #f87171; }
+
+  .spin { display: inline-block; animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Success card ── */
+  .success { text-align: center; }
+  .success .tick { font-size: 48px; margin-bottom: 10px; }
+  .success h3 { font-size: 20px; font-weight: 700; margin-bottom: 14px; }
+  .vote-row { display: flex; justify-content: center; gap: 28px; margin-bottom: 10px; }
+  .vote-item { text-align: center; }
+  .vote-num { font-size: 36px; font-weight: 800; display: block; }
+  .vote-lbl { font-size: 12px; color: var(--slate); }
+  .teal  { color: var(--teal); }
+  .orange { color: #fb923c; }
+  .pu-name { font-size: 12px; color: var(--slate); margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo-wrap">
+    <img src="/static/edk-logo.svg" alt="E Don Kast" onerror="this.style.display='none'">
+    <span class="logo-text">E Don Kast</span>
+  </div>
+  <p class="subtitle">Nigeria 2023 Election Verification</p>
+</div>
+
+<div class="card">
+  <div class="ward-tag">
+    <span class="dot"></span>
+    Ward 4 · Obio-Akpor · Rivers State
+  </div>
+
+  <!-- Upload state -->
+  <div id="upload-state">
+    <h2>Photograph your EC8A form</h2>
+    <p class="hint">Hold steady — make sure all text is visible</p>
+
+    <input type="file" id="file-input" accept="image/*" capture="environment">
+    <img id="preview" alt="Form preview">
+
+    <button class="btn-primary" id="camera-btn" onclick="document.getElementById('file-input').click()">
+      <span>📷</span> Take Photo / Upload
+    </button>
+    <button class="btn-primary btn-blue" id="submit-btn" style="display:none; margin-top:10px" onclick="submitForm()">
+      ✓ Submit Form
+    </button>
+    <button class="btn-primary btn-ghost" id="retake-btn" style="display:none" onclick="retake()">
+      Retake photo
+    </button>
+
+    <div class="status" id="status"></div>
+  </div>
+
+  <!-- Success state -->
+  <div id="success-state" style="display:none" class="success">
+    <div class="tick">✅</div>
+    <h3>Submitted!</h3>
+    <div class="vote-row">
+      <div class="vote-item">
+        <span class="vote-num teal" id="res-lp">—</span>
+        <span class="vote-lbl">LP votes</span>
+      </div>
+      <div class="vote-item">
+        <span class="vote-num orange" id="res-apc">—</span>
+        <span class="vote-lbl">APC votes</span>
+      </div>
+    </div>
+    <p class="pu-name" id="res-pu"></p>
+    <button class="btn-primary btn-ghost" style="margin-top:20px" onclick="reset()">
+      📷 Submit Another Form
+    </button>
+  </div>
+</div>
+
+<script>
+  let selectedFile = null;
+
+  document.getElementById('file-input').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    selectedFile = file;
+
+    const preview = document.getElementById('preview');
+    const reader  = new FileReader();
+    reader.onload  = ev => {
+      preview.src          = ev.target.result;
+      preview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+
+    document.getElementById('camera-btn').style.display = 'none';
+    document.getElementById('submit-btn').style.display = 'flex';
+    document.getElementById('retake-btn').style.display = 'flex';
+    document.getElementById('status').textContent = '';
+  });
+
+  function retake() {
+    selectedFile = null;
+    document.getElementById('preview').style.display  = 'none';
+    document.getElementById('submit-btn').style.display = 'none';
+    document.getElementById('retake-btn').style.display = 'none';
+    document.getElementById('camera-btn').style.display = 'flex';
+    document.getElementById('status').textContent = '';
+    document.getElementById('file-input').value   = '';
+  }
+
+  async function submitForm() {
+    if (!selectedFile) return;
+
+    const submitBtn = document.getElementById('submit-btn');
+    const statusEl  = document.getElementById('status');
+    submitBtn.disabled = true;
+    statusEl.className = 'status loading';
+    statusEl.innerHTML = '<span class="spin">⟳</span> Extracting with Claude Vision…';
+
+    const form = new FormData();
+    form.append('image', selectedFile);
+
+    try {
+      const res  = await fetch('/submit', { method: 'POST', body: form });
+      const data = await res.json();
+
+      if (data.error) {
+        statusEl.className   = 'status error';
+        statusEl.textContent = '⚠ ' + data.error;
+        submitBtn.disabled   = false;
+        return;
+      }
+
+      const lp  = data.parties?.LP?.figures  ?? null;
+      const apc = data.parties?.APC?.figures ?? null;
+      const pu  = data.meta?.polling_unit    ?? '';
+
+      document.getElementById('res-lp').textContent  = lp  ?? '—';
+      document.getElementById('res-apc').textContent = apc ?? '—';
+      document.getElementById('res-pu').textContent  = pu;
+
+      document.getElementById('upload-state').style.display  = 'none';
+      document.getElementById('success-state').style.display = 'block';
+
+    } catch {
+      statusEl.className   = 'status error';
+      statusEl.textContent = '⚠ Network error — please try again';
+      submitBtn.disabled   = false;
+    }
+  }
+
+  function reset() {
+    selectedFile = null;
+    document.getElementById('preview').style.display    = 'none';
+    document.getElementById('submit-btn').style.display = 'none';
+    document.getElementById('retake-btn').style.display = 'none';
+    document.getElementById('camera-btn').style.display = 'flex';
+    document.getElementById('status').textContent       = '';
+    document.getElementById('file-input').value         = '';
+    document.getElementById('upload-state').style.display  = 'block';
+    document.getElementById('success-state').style.display = 'none';
+  }
+</script>
+</body>
+</html>
