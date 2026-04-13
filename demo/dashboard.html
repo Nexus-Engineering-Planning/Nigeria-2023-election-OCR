@@ -139,7 +139,9 @@
   .comp-label { font-size: 14px; color: #c8d8e8; }
   .comp-vals { display: flex; gap: 48px; }
   .comp-val { text-align: right; min-width: 80px; }
-  .comp-val .val-label { font-size: 10px; color: var(--slate); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 2px; }
+  .comp-val .val-label { font-size: 10px; color: var(--slate); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 2px; display: flex; align-items: center; gap: 5px; justify-content: flex-end; }
+  .party-logo { width: 18px; height: 18px; object-fit: contain; border-radius: 3px; flex-shrink: 0; }
+  .party-logo-sm { width: 14px; height: 14px; object-fit: contain; border-radius: 2px; flex-shrink: 0; vertical-align: middle; margin-right: 3px; }
   .comp-val .val-num { font-size: 22px; font-weight: 800; }
 
   /* ── Discrepancy box ── */
@@ -369,8 +371,8 @@
   <div class="comp-row header-row">
     <span style="font-size:10px;color:var(--slate);text-transform:uppercase;letter-spacing:.1em">Source</span>
     <div class="comp-vals">
-      <div class="comp-val"><div class="val-label lp-num">LP Votes</div></div>
-      <div class="comp-val"><div class="val-label apc-num">APC Votes</div></div>
+      <div class="comp-val"><div class="val-label lp-num"><img src="/static/logo-lp.jpg" class="party-logo" alt="LP">LP Votes</div></div>
+      <div class="comp-val"><div class="val-label apc-num"><img src="/static/logo-apc.jpg" class="party-logo" alt="APC">APC Votes</div></div>
     </div>
   </div>
   <div class="comp-row">
@@ -418,7 +420,11 @@
       <div class="head-thumb-spacer"></div>
       <span>Polling Unit</span>
     </div>
-    <div class="cols"><span>LP</span><span>APC</span><span>Quality</span></div>
+    <div class="cols">
+      <span><img src="/static/logo-lp.jpg" class="party-logo-sm" alt="">LP</span>
+      <span><img src="/static/logo-apc.jpg" class="party-logo-sm" alt="">APC</span>
+      <span>Quality</span>
+    </div>
   </div>
   <div id="feed-list">
     <div class="feed-empty">Waiting for submissions — audience members scan the QR code and photograph their form.</div>
@@ -499,8 +505,8 @@
 
           // Secondary party figures (PDP, NNPP) + flags — shown below PU name
           const secParts = [];
-          if (r.pdp  != null) secParts.push(`<span class="feed-pdp">PDP&nbsp;${r.pdp}</span>`);
-          if (r.nnpp != null) secParts.push(`<span class="feed-nnpp">NNPP&nbsp;${r.nnpp}</span>`);
+          if (r.pdp  != null) secParts.push(`<span class="feed-pdp"><img src="/static/logo-pdp.jpg" class="party-logo-sm" alt="">PDP&nbsp;${r.pdp}</span>`);
+          if (r.nnpp != null) secParts.push(`<span class="feed-nnpp"><img src="/static/logo-nnpp.jpg" class="party-logo-sm" alt="">NNPP&nbsp;${r.nnpp}</span>`);
           if (r.flags)        secParts.push(`<span class="feed-flags">${r.flags}</span>`);
           const secHtml = secParts.length
             ? `<div class="feed-secondary">${secParts.join('')}</div>`
