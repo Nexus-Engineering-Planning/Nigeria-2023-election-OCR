@@ -15,6 +15,8 @@
     --bg:       #0a1628;
     --card:     #162032;
     --slate:    #8899aa;
+    --lp:       #E30613;   /* Labour Party */
+    --apc:      #00A650;   /* All Progressives Congress */
   }
 
   body {
@@ -135,8 +137,10 @@
   .vote-item { text-align: center; }
   .vote-num { font-size: 36px; font-weight: 800; display: block; }
   .vote-lbl { font-size: 12px; color: var(--slate); }
-  .teal  { color: var(--teal); }
-  .orange { color: #fb923c; }
+  .teal    { color: var(--teal); }     /* UI brand */
+  .orange  { color: #fb923c; }         /* UI brand */
+  .lp-col  { color: var(--lp);  }
+  .apc-col { color: var(--apc); }
   .pu-name { font-size: 12px; color: var(--slate); margin-top: 6px; }
 </style>
 </head>
@@ -183,11 +187,11 @@
     <h3>Submitted!</h3>
     <div class="vote-row">
       <div class="vote-item">
-        <span class="vote-num teal" id="res-lp">—</span>
+        <span class="vote-num lp-col" id="res-lp">—</span>
         <span class="vote-lbl">LP votes</span>
       </div>
       <div class="vote-item">
-        <span class="vote-num orange" id="res-apc">—</span>
+        <span class="vote-num apc-col" id="res-apc">—</span>
         <span class="vote-lbl">APC votes</span>
       </div>
     </div>

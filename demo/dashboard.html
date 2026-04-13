@@ -21,6 +21,12 @@
     --red:       #f87171;
     --red-bg:    rgba(30,6,6,0.8);
     --red-border: #ef4444;
+
+    /* Official Nigerian party colours */
+    --lp:    #E30613;   /* Labour Party */
+    --apc:   #00A650;   /* All Progressives Congress */
+    --pdp:   #9B2335;   /* Peoples Democratic Party */
+    --nnpp:  #F5A623;   /* New Nigeria Peoples Party */
   }
 
   body {
@@ -103,8 +109,10 @@
     letter-spacing: .1em;
     font-weight: 600;
   }
-  .teal   { color: var(--teal); }
-  .orange { color: var(--orange); }
+  .teal    { color: var(--teal); }     /* UI brand only */
+  .orange  { color: var(--orange); }   /* UI brand only */
+  .lp-num  { color: var(--lp);   }
+  .apc-num { color: var(--apc);  }
 
   /* ── Comparison table ── */
   .comparison {
@@ -231,11 +239,23 @@
   .feed-pu { color: #c8d8e8; }
   .feed-flags { font-size: 11px; color: var(--slate); margin-top: 2px; }
   .feed-cols { display: flex; gap: 40px; align-items: center; }
-  .feed-lp  { font-weight: 700; color: var(--teal);   min-width: 36px; text-align: right; }
-  .feed-apc { font-weight: 700; color: var(--orange); min-width: 36px; text-align: right; }
+  .feed-lp  { font-weight: 700; color: var(--lp);  min-width: 36px; text-align: right; }
+  .feed-apc { font-weight: 700; color: var(--apc); min-width: 36px; text-align: right; }
   .quality-good { color: #34d399; font-size: 11px; min-width: 68px; text-align: right; }
   .quality-poor { color: #fbbf24; font-size: 11px; min-width: 68px; text-align: right; }
   .quality-bad  { color: var(--red); font-size: 11px; min-width: 68px; text-align: right; }
+
+  /* Secondary party figures (PDP, NNPP) under PU name */
+  .feed-secondary {
+    font-size: 11px;
+    color: var(--slate);
+    display: flex;
+    gap: 8px;
+    margin-top: 3px;
+    flex-wrap: wrap;
+  }
+  .feed-pdp  { color: var(--pdp);  font-weight: 600; }
+  .feed-nnpp { color: var(--nnpp); font-weight: 600; }
 
   /* ── Connection status ── */
   .conn-badge {
@@ -334,11 +354,11 @@
     <div class="counter-label">Forms Submitted</div>
   </div>
   <div class="counter-card">
-    <div class="counter-num teal" id="lp-total">0</div>
+    <div class="counter-num lp-num" id="lp-total">0</div>
     <div class="counter-label">LP Votes (EC8A)</div>
   </div>
   <div class="counter-card">
-    <div class="counter-num orange" id="apc-total">0</div>
+    <div class="counter-num apc-num" id="apc-total">0</div>
     <div class="counter-label">APC Votes (EC8A)</div>
   </div>
 </div>
@@ -349,22 +369,22 @@
   <div class="comp-row header-row">
     <span style="font-size:10px;color:var(--slate);text-transform:uppercase;letter-spacing:.1em">Source</span>
     <div class="comp-vals">
-      <div class="comp-val"><div class="val-label teal">LP Votes</div></div>
-      <div class="comp-val"><div class="val-label orange">APC Votes</div></div>
+      <div class="comp-val"><div class="val-label lp-num">LP Votes</div></div>
+      <div class="comp-val"><div class="val-label apc-num">APC Votes</div></div>
     </div>
   </div>
   <div class="comp-row">
     <div class="comp-label">EC8A Forms — CCIJ / Veza News dataset (169k forms)</div>
     <div class="comp-vals">
-      <div class="comp-val"><div class="val-num teal" id="ec8a-lp">68,521</div></div>
-      <div class="comp-val"><div class="val-num orange" id="ec8a-apc">16,980</div></div>
+      <div class="comp-val"><div class="val-num lp-num" id="ec8a-lp">68,521</div></div>
+      <div class="comp-val"><div class="val-num apc-num" id="ec8a-apc">16,980</div></div>
     </div>
   </div>
   <div class="comp-row">
     <div class="comp-label">INEC Official Declared Result</div>
     <div class="comp-vals">
-      <div class="comp-val"><div class="val-num teal">3,829</div></div>
-      <div class="comp-val"><div class="val-num orange">80,239</div></div>
+      <div class="comp-val"><div class="val-num lp-num">3,829</div></div>
+      <div class="comp-val"><div class="val-num apc-num">80,239</div></div>
     </div>
   </div>
 </div>
@@ -469,12 +489,22 @@
             r.quality === 'poor' ? 'quality-poor' : 'quality-bad';
 
           const puLabel = r.polling_unit || r.pu_code || 'Unknown PU';
-          // Thumbnails are served via /thumb/<id> — browser caches after first load
+
+          // Thumbnails served via /thumb/<id> — browser caches after first load
           const thumbHtml = r.has_media
             ? `<img class="feed-thumb" src="/thumb/${r.id}" alt="Form thumbnail"
                  loading="lazy"
                  onclick="openLightbox('/preview/${r.id}','${puLabel.replace(/'/g,"\\'")}')">`
             : `<div class="feed-thumb-placeholder"></div>`;
+
+          // Secondary party figures (PDP, NNPP) + flags — shown below PU name
+          const secParts = [];
+          if (r.pdp  != null) secParts.push(`<span class="feed-pdp">PDP&nbsp;${r.pdp}</span>`);
+          if (r.nnpp != null) secParts.push(`<span class="feed-nnpp">NNPP&nbsp;${r.nnpp}</span>`);
+          if (r.flags)        secParts.push(`<span class="feed-flags">${r.flags}</span>`);
+          const secHtml = secParts.length
+            ? `<div class="feed-secondary">${secParts.join('')}</div>`
+            : '';
 
           const div = document.createElement('div');
           div.className = 'feed-item';
@@ -483,7 +513,7 @@
               ${thumbHtml}
               <div>
                 <div class="feed-pu">${puLabel}</div>
-                ${r.flags ? `<div class="feed-flags">${r.flags}</div>` : ''}
+                ${secHtml}
               </div>
             </div>
             <div class="feed-cols">
