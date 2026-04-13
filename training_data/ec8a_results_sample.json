@@ -1,0 +1,568 @@
+[
+  {
+    "meta": {
+      "state": "ABIA",
+      "lga": "UMUAHIA NORTH",
+      "registration_area": "NKWOEGWU",
+      "polling_unit": "UMUAFIAKA VILLAGE HALL",
+      "state_code": "01",
+      "lga_code": "15",
+      "ra_code": "09",
+      "pu_code": "012",
+      "serial_number": "PE/0003075",
+      "date": "25/2/23"
+    },
+    "summary": {
+      "voters_on_register": 145,
+      "accredited_voters": 103,
+      "ballot_papers_issued": 103,
+      "unused_ballot_papers": 400,
+      "spoiled_ballot_papers": 246,
+      "rejected_ballots": 51,
+      "total_valid_votes": 90,
+      "total_used_ballot_papers": 154
+    },
+    "party_results": {
+      "A": {
+        "figures": 0,
+        "words": ""
+      },
+      "AA": {
+        "figures": 0,
+        "words": "Zero"
+      },
+      "AAC": {
+        "figures": 0,
+        "words": "ZerD"
+      },
+      "ADC": {
+        "figures": 0,
+        "words": "zerD"
+      },
+      "ADP": {
+        "figures": 0,
+        "words": "ZerD"
+      },
+      "APC": {
+        "figures": 2,
+        "words": "Two"
+      },
+      "APGA": {
+        "figures": 0,
+        "words": "zero"
+      },
+      "APM": {
+        "figures": 0,
+        "words": "zerD"
+      },
+      "APP": {
+        "figures": 0,
+        "words": "zerD"
+      },
+      "BP": {
+        "figures": 0,
+        "words": "zero"
+      },
+      "LP": {
+        "figures": 85,
+        "words": "85"
+      },
+      "NNPP": {
+        "figures": 0,
+        "words": "ZerD"
+      },
+      "NRM": {
+        "figures": 0,
+        "words": "ZerO"
+      },
+      "PDP": {
+        "figures": 3,
+        "words": "Three"
+      },
+      "PRP": {
+        "figures": 0,
+        "words": "zerD"
+      },
+      "SDP": {
+        "figures": 0,
+        "words": "zerD"
+      },
+      "YPP": {
+        "figures": 0,
+        "words": "zerO"
+      },
+      "ZLP": {
+        "figures": 0,
+        "words": "zerD"
+      }
+    },
+    "flags": {
+      "image_quality": "good",
+      "stamp_obscures_data": true,
+      "rotation_issue": false,
+      "fields_unreadable": [
+        "unused_ballot_papers",
+        "spoiled_ballot_papers"
+      ]
+    },
+    "filename": "01_15_09_012_24808863.gif"
+  },
+  {
+    "meta": {
+      "state": "",
+      "lga": "",
+      "registration_area": "",
+      "polling_unit": "",
+      "state_code": "",
+      "lga_code": "",
+      "ra_code": "",
+      "pu_code": "",
+      "serial_number": "",
+      "date": "25.01.2023"
+    },
+    "summary": {
+      "voters_on_register": null,
+      "accredited_voters": 179,
+      "ballot_papers_issued": null,
+      "unused_ballot_papers": null,
+      "spoiled_ballot_papers": null,
+      "rejected_ballots": null,
+      "total_valid_votes": 94,
+      "total_used_ballot_papers": null
+    },
+    "party_results": {
+      "A": {
+        "figures": null,
+        "words": ""
+      },
+      "AA": {
+        "figures": null,
+        "words": ""
+      },
+      "AAC": {
+        "figures": null,
+        "words": ""
+      },
+      "ADC": {
+        "figures": null,
+        "words": ""
+      },
+      "ADP": {
+        "figures": null,
+        "words": ""
+      },
+      "APC": {
+        "figures": null,
+        "words": ""
+      },
+      "APGA": {
+        "figures": null,
+        "words": ""
+      },
+      "APM": {
+        "figures": null,
+        "words": ""
+      },
+      "APP": {
+        "figures": null,
+        "words": ""
+      },
+      "BP": {
+        "figures": null,
+        "words": ""
+      },
+      "LP": {
+        "figures": null,
+        "words": ""
+      },
+      "NNPP": {
+        "figures": null,
+        "words": ""
+      },
+      "NRM": {
+        "figures": null,
+        "words": ""
+      },
+      "PDP": {
+        "figures": null,
+        "words": ""
+      },
+      "PRP": {
+        "figures": null,
+        "words": ""
+      },
+      "SDP": {
+        "figures": null,
+        "words": ""
+      },
+      "YPP": {
+        "figures": 2,
+        "words": ""
+      },
+      "ZLP": {
+        "figures": null,
+        "words": ""
+      }
+    },
+    "flags": {
+      "image_quality": "poor",
+      "stamp_obscures_data": true,
+      "rotation_issue": false,
+      "fields_unreadable": [
+        "state",
+        "lga",
+        "registration_area",
+        "polling_unit",
+        "state_code",
+        "lga_code",
+        "ra_code",
+        "pu_code",
+        "serial_number",
+        "voters_on_register",
+        "ballot_papers_issued",
+        "unused_ballot_papers",
+        "spoiled_ballot_papers",
+        "rejected_ballots",
+        "total_used_ballot_papers",
+        "A",
+        "AA",
+        "AAC",
+        "ADC",
+        "ADP",
+        "APC",
+        "APGA",
+        "APM",
+        "APP",
+        "BP",
+        "LP",
+        "NNPP",
+        "NRM",
+        "PDP",
+        "PRP",
+        "SDP",
+        "ZLP"
+      ]
+    },
+    "filename": "01_16_10_018_24810653.gif"
+  },
+  {
+    "meta": {
+      "state": "ADAMAWA",
+      "lga": "GANYE",
+      "registration_area": "GANYE II",
+      "polling_unit": "TAPPARE/VTC GANYE",
+      "state_code": "002",
+      "lga_code": "03",
+      "ra_code": "04",
+      "pu_code": "013",
+      "serial_number": "PE 0000520",
+      "date": "25/02/2023"
+    },
+    "summary": {
+      "voters_on_register": 750,
+      "accredited_voters": 318,
+      "ballot_papers_issued": 750,
+      "unused_ballot_papers": 432,
+      "spoiled_ballot_papers": 0,
+      "rejected_ballots": 15,
+      "total_valid_votes": 303,
+      "total_used_ballot_papers": 318
+    },
+    "party_results": {
+      "A": {
+        "figures": null,
+        "words": ""
+      },
+      "AA": {
+        "figures": null,
+        "words": ""
+      },
+      "AAC": {
+        "figures": null,
+        "words": ""
+      },
+      "ADC": {
+        "figures": null,
+        "words": ""
+      },
+      "ADP": {
+        "figures": null,
+        "words": ""
+      },
+      "APC": {
+        "figures": 90,
+        "words": "NINETY"
+      },
+      "APGA": {
+        "figures": null,
+        "words": ""
+      },
+      "APM": {
+        "figures": 2,
+        "words": "TWO"
+      },
+      "APP": {
+        "figures": null,
+        "words": ""
+      },
+      "BP": {
+        "figures": null,
+        "words": ""
+      },
+      "LP": {
+        "figures": 39,
+        "words": "THIRTY NINE"
+      },
+      "NNPP": {
+        "figures": 2,
+        "words": "TWO"
+      },
+      "NRM": {
+        "figures": null,
+        "words": ""
+      },
+      "PDP": {
+        "figures": 163,
+        "words": "ONE SIXTY THREE"
+      },
+      "PRP": {
+        "figures": null,
+        "words": ""
+      },
+      "SDP": {
+        "figures": 1,
+        "words": "ONE"
+      },
+      "YPP": {
+        "figures": null,
+        "words": ""
+      },
+      "ZLP": {
+        "figures": 6,
+        "words": "SIX"
+      }
+    },
+    "flags": {
+      "image_quality": "good",
+      "stamp_obscures_data": false,
+      "rotation_issue": false,
+      "fields_unreadable": []
+    },
+    "filename": "02_03_04_013_24813753.gif"
+  },
+  {
+    "meta": {
+      "state": "AKWA IBOM",
+      "lga": "EASTERN OBOLO",
+      "registration_area": "EASTERN OBOLO V",
+      "polling_unit": "VILLAGE SQUARE OKWAN OBOLO II",
+      "state_code": "04",
+      "lga_code": "05",
+      "ra_code": "05",
+      "pu_code": "006",
+      "serial_number": "",
+      "date": "25/02/2023"
+    },
+    "summary": {
+      "voters_on_register": 316,
+      "accredited_voters": 102,
+      "ballot_papers_issued": 102,
+      "unused_ballot_papers": null,
+      "spoiled_ballot_papers": null,
+      "rejected_ballots": null,
+      "total_valid_votes": 101,
+      "total_used_ballot_papers": 102
+    },
+    "party_results": {
+      "A": {
+        "figures": null,
+        "words": ""
+      },
+      "AA": {
+        "figures": null,
+        "words": ""
+      },
+      "AAC": {
+        "figures": null,
+        "words": ""
+      },
+      "ADC": {
+        "figures": null,
+        "words": ""
+      },
+      "ADP": {
+        "figures": 1,
+        "words": "One"
+      },
+      "APC": {
+        "figures": 25,
+        "words": "Twenty five"
+      },
+      "APGA": {
+        "figures": null,
+        "words": ""
+      },
+      "APM": {
+        "figures": null,
+        "words": ""
+      },
+      "APP": {
+        "figures": null,
+        "words": ""
+      },
+      "BP": {
+        "figures": null,
+        "words": ""
+      },
+      "LP": {
+        "figures": 2,
+        "words": "TWO"
+      },
+      "NNPP": {
+        "figures": null,
+        "words": ""
+      },
+      "NRM": {
+        "figures": null,
+        "words": ""
+      },
+      "PDP": {
+        "figures": 69,
+        "words": "Sixty Nine"
+      },
+      "PRP": {
+        "figures": null,
+        "words": ""
+      },
+      "SDP": {
+        "figures": null,
+        "words": ""
+      },
+      "YPP": {
+        "figures": 3,
+        "words": "Three"
+      },
+      "ZLP": {
+        "figures": 1,
+        "words": "One"
+      }
+    },
+    "flags": {
+      "image_quality": "poor",
+      "stamp_obscures_data": true,
+      "rotation_issue": false,
+      "fields_unreadable": [
+        "serial_number",
+        "unused_ballot_papers",
+        "spoiled_ballot_papers",
+        "rejected_ballots"
+      ]
+    },
+    "filename": "03_02_05_006_24819225.gif"
+  },
+  {
+    "meta": {
+      "state": "AKWA IBOM",
+      "lga": "OKOBO",
+      "registration_area": "NUNG ATAI/UBE 1",
+      "polling_unit": "VILLAGE SQUARE, EBIGHI EDU",
+      "state_code": "003",
+      "lga_code": "23",
+      "ra_code": "03",
+      "pu_code": "002",
+      "serial_number": "PE/0002939",
+      "date": "25-02-2023"
+    },
+    "summary": {
+      "voters_on_register": 440,
+      "accredited_voters": 105,
+      "ballot_papers_issued": 400,
+      "unused_ballot_papers": 81,
+      "spoiled_ballot_papers": 4,
+      "rejected_ballots": 9,
+      "total_valid_votes": 104,
+      "total_used_ballot_papers": 117
+    },
+    "party_results": {
+      "A": {
+        "figures": null,
+        "words": ""
+      },
+      "AA": {
+        "figures": null,
+        "words": ""
+      },
+      "AAC": {
+        "figures": null,
+        "words": ""
+      },
+      "ADC": {
+        "figures": null,
+        "words": ""
+      },
+      "ADP": {
+        "figures": null,
+        "words": ""
+      },
+      "APC": {
+        "figures": 31,
+        "words": "THIRTY-ONE"
+      },
+      "APGA": {
+        "figures": null,
+        "words": ""
+      },
+      "APM": {
+        "figures": null,
+        "words": ""
+      },
+      "APP": {
+        "figures": null,
+        "words": ""
+      },
+      "BP": {
+        "figures": null,
+        "words": ""
+      },
+      "LP": {
+        "figures": 19,
+        "words": "NINETEEN"
+      },
+      "NNPP": {
+        "figures": null,
+        "words": ""
+      },
+      "NRM": {
+        "figures": null,
+        "words": ""
+      },
+      "PDP": {
+        "figures": 50,
+        "words": "FIFTY"
+      },
+      "PRP": {
+        "figures": null,
+        "words": ""
+      },
+      "SDP": {
+        "figures": null,
+        "words": ""
+      },
+      "YPP": {
+        "figures": 4,
+        "words": "FOUR"
+      },
+      "ZLP": {
+        "figures": null,
+        "words": ""
+      }
+    },
+    "flags": {
+      "image_quality": "good",
+      "stamp_obscures_data": true,
+      "rotation_issue": false,
+      "fields_unreadable": []
+    },
+    "filename": "03_23_03_002_24819023.gif"
+  }
+]

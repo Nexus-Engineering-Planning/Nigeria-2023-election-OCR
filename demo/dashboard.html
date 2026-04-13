@@ -172,6 +172,7 @@
   .feed-table-head {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 0 10px;
     border-bottom: 1px solid var(--border);
     font-size: 10px;
@@ -179,6 +180,12 @@
     letter-spacing: .1em;
     color: var(--slate);
     font-weight: 600;
+  }
+  .feed-table-head .head-left {
+    display: flex; align-items: center; gap: 12px;
+  }
+  .feed-table-head .head-thumb-spacer {
+    width: 48px; flex-shrink: 0;
   }
   .feed-table-head .cols { display: flex; gap: 40px; }
 
@@ -203,6 +210,24 @@
     to   { opacity: 1; transform: translateY(0); }
   }
   .feed-item:last-child { border-bottom: none; }
+  .feed-left { display: flex; align-items: center; gap: 12px; }
+  .feed-thumb {
+    width: 48px; height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: opacity .15s, transform .15s;
+  }
+  .feed-thumb:hover { opacity: 0.85; transform: scale(1.05); }
+  .feed-thumb-placeholder {
+    width: 48px; height: 48px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    flex-shrink: 0;
+  }
   .feed-pu { color: #c8d8e8; }
   .feed-flags { font-size: 11px; color: var(--slate); margin-top: 2px; }
   .feed-cols { display: flex; gap: 40px; align-items: center; }
@@ -211,6 +236,67 @@
   .quality-good { color: #34d399; font-size: 11px; min-width: 68px; text-align: right; }
   .quality-poor { color: #fbbf24; font-size: 11px; min-width: 68px; text-align: right; }
   .quality-bad  { color: var(--red); font-size: 11px; min-width: 68px; text-align: right; }
+
+  /* ── Connection status ── */
+  .conn-badge {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--red);
+    background: rgba(239,68,68,.12);
+    border: 1px solid rgba(239,68,68,.3);
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-left: 12px;
+  }
+  .conn-badge.visible { display: flex; }
+
+  /* ── Lightbox ── */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    padding: 48px 20px 32px;   /* top padding so close btn is never clipped */
+  }
+  .lightbox.open { display: flex; }
+  .lightbox-inner {
+    position: relative;
+    max-width: min(92vw, 680px);
+    width: 100%;
+  }
+  .lightbox-img {
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 120px);
+    object-fit: contain;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    display: block;
+  }
+  .lightbox-meta {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255,255,255,.55);
+    margin-top: 10px;
+  }
+  .lightbox-close {
+    position: absolute;
+    top: -36px; right: 0;
+    background: none; border: none;
+    color: rgba(255,255,255,.7);
+    font-size: 26px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px 8px;
+  }
+  .lightbox-close:hover { color: #fff; }
 
   .footer {
     text-align: center;
@@ -236,6 +322,7 @@
       <span class="live-dot"></span>
       LIVE
     </div>
+    <div class="conn-badge" id="conn-badge">&#9888; Reconnecting…</div>
     <button class="reset-btn" onclick="resetDemo()">Reset</button>
   </div>
 </header>
@@ -267,14 +354,14 @@
     </div>
   </div>
   <div class="comp-row">
-    <div class="comp-label">📋 EC8A Forms (audience-reconstructed)</div>
+    <div class="comp-label">EC8A Forms — CCIJ / Veza News dataset (169k forms)</div>
     <div class="comp-vals">
       <div class="comp-val"><div class="val-num teal" id="ec8a-lp">68,521</div></div>
       <div class="comp-val"><div class="val-num orange" id="ec8a-apc">16,980</div></div>
     </div>
   </div>
   <div class="comp-row">
-    <div class="comp-label">🏛 INEC Official Declared Result</div>
+    <div class="comp-label">INEC Official Declared Result</div>
     <div class="comp-vals">
       <div class="comp-val"><div class="val-num teal">3,829</div></div>
       <div class="comp-val"><div class="val-num orange">80,239</div></div>
@@ -307,11 +394,23 @@
     <div class="feed-count" id="feed-count"></div>
   </div>
   <div class="feed-table-head">
-    <span>Polling Unit</span>
+    <div class="head-left">
+      <div class="head-thumb-spacer"></div>
+      <span>Polling Unit</span>
+    </div>
     <div class="cols"><span>LP</span><span>APC</span><span>Quality</span></div>
   </div>
   <div id="feed-list">
     <div class="feed-empty">Waiting for submissions — audience members scan the QR code and photograph their form.</div>
+  </div>
+</div>
+
+<!-- ── Lightbox ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="EC8A Form">
+    <div class="lightbox-meta" id="lightbox-meta" style="margin-top:10px"></div>
   </div>
 </div>
 
@@ -321,13 +420,21 @@
 
 <script>
   const fmt = n => Number(n).toLocaleString();
-  let knownIds = new Set();
+  let knownIds  = new Set();
   let discShown = false;
+  let failCount = 0;
+  const connBadge = document.getElementById('conn-badge');
 
   async function poll() {
     try {
       const res  = await fetch('/results');
       const data = await res.json();
+
+      // Connection restored
+      if (failCount > 0) {
+        failCount = 0;
+        connBadge.classList.remove('visible');
+      }
 
       const { results, count, totals, ground_truth: gt } = data;
 
@@ -358,15 +465,26 @@
         newResults.reverse().forEach(r => {
           knownIds.add(r.id);
           const qualityClass =
-            r.quality === 'good'       ? 'quality-good' :
-            r.quality === 'poor'       ? 'quality-poor' : 'quality-bad';
+            r.quality === 'good' ? 'quality-good' :
+            r.quality === 'poor' ? 'quality-poor' : 'quality-bad';
+
+          const puLabel = r.polling_unit || r.pu_code || 'Unknown PU';
+          // Thumbnails are served via /thumb/<id> — browser caches after first load
+          const thumbHtml = r.has_media
+            ? `<img class="feed-thumb" src="/thumb/${r.id}" alt="Form thumbnail"
+                 loading="lazy"
+                 onclick="openLightbox('/preview/${r.id}','${puLabel.replace(/'/g,"\\'")}')">`
+            : `<div class="feed-thumb-placeholder"></div>`;
 
           const div = document.createElement('div');
           div.className = 'feed-item';
           div.innerHTML = `
-            <div>
-              <div class="feed-pu">${r.polling_unit || r.pu_code || 'Unknown PU'}</div>
-              ${r.flags ? `<div class="feed-flags">${r.flags}</div>` : ''}
+            <div class="feed-left">
+              ${thumbHtml}
+              <div>
+                <div class="feed-pu">${puLabel}</div>
+                ${r.flags ? `<div class="feed-flags">${r.flags}</div>` : ''}
+              </div>
             </div>
             <div class="feed-cols">
               <span class="feed-lp">${r.lp ?? '—'}</span>
@@ -380,7 +498,11 @@
           `(${count} form${count !== 1 ? 's' : ''} received)`;
       }
 
-    } catch(e) { console.error(e); }
+    } catch(e) {
+      failCount++;
+      if (failCount >= 2) connBadge.classList.add('visible');
+      console.error('Poll failed:', e);
+    }
 
     setTimeout(poll, 2000);
   }
@@ -390,6 +512,8 @@
     await fetch('/reset', { method: 'POST' });
     knownIds  = new Set();
     discShown = false;
+    failCount = 0;
+    connBadge.classList.remove('visible');
     document.getElementById('count').textContent     = '0';
     document.getElementById('lp-total').textContent  = '0';
     document.getElementById('apc-total').textContent = '0';
@@ -400,6 +524,22 @@
   }
 
   poll();
+
+  function openLightbox(src, label) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-meta').textContent = label || '';
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  function closeLightbox(e) {
+    if (e && e.target !== document.getElementById('lightbox')) return;
+    document.getElementById('lightbox').classList.remove('open');
+    document.getElementById('lightbox-img').src = '';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
+  });
 </script>
 </body>
 </html>

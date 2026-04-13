@@ -1,0 +1,11 @@
+# Nigeria 2023 Election OCR — Python dependencies
+# Install: pip install -r requirements.txt
+
+# ── Claude Vision extraction (ec8a_extract.py) ────────────────────────────────
+anthropic>=0.40.0
+
+# ── Image handling ────────────────────────────────────────────────────────────
+Pillow>=10.0.0
+
+# ── Dataset utilities (build_training_data.py, split_dataset.py) ──────────────
+# stdlib only — no extra packages required

@@ -8,7 +8,9 @@ Routes:
   GET  /              → mobile upload page (audience scans QR, photographs EC8A form)
   GET  /dashboard     → live dashboard (projected on screen)
   POST /submit        → receives image → Claude Vision → stores result → returns JSON
-  GET  /results       → JSON of all results so far
+  GET  /results       → JSON of all results so far (no base64 blobs)
+  GET  /thumb/<id>    → 80px JPEG thumbnail for a submitted form
+  GET  /preview/<id>  → 600px JPEG preview for a submitted form (lightbox)
   POST /reset         → clears all results (run before demo starts)
 
 Setup:
@@ -17,9 +19,6 @@ Setup:
 Run:
   cd Nigeria-2023-election-OCR/demo
   python server.py
-
-Expose for QR code (in a second terminal):
-  ngrok http 5000
 """
 
 import anthropic
@@ -31,10 +30,19 @@ import threading
 import uuid
 from datetime import datetime
 
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, Response, jsonify, request, send_from_directory
 from PIL import Image
 
 app = Flask(__name__, static_folder="static", static_url_path="/static")
+
+# ── Upload size limit (15 MB) ─────────────────────────────────────────────────
+app.config["MAX_CONTENT_LENGTH"] = 15 * 1024 * 1024
+
+
+@app.errorhandler(413)
+def too_large(_e):
+    return jsonify({"error": "Image too large — please use a photo under 15 MB"}), 413
+
 
 # ── Ground truth ─────────────────────────────────────────────────────────────
 # Ward 4 = RUMUODOMAYA (3A), Obio-Akpor LGA, Rivers State
@@ -49,9 +57,27 @@ GROUND_TRUTH = {
     "inec_declared":  {"lp": 3829,  "apc": 80239},   # INEC officially declared (LGA)
 }
 
-# ── In-memory results store ───────────────────────────────────────────────────
+# ── In-memory stores ──────────────────────────────────────────────────────────
 _lock    = threading.Lock()
-_results = []   # list of dicts, one per submitted form
+_results = []          # list of result dicts — NO base64 blobs here
+_media   = {}          # id → {"thumb": bytes, "preview": bytes}
+
+# ── Anthropic client (singleton — created lazily on first request) ────────────
+_anthropic_client: anthropic.Anthropic | None = None
+_client_lock = threading.Lock()
+
+
+def get_anthropic_client() -> anthropic.Anthropic:
+    global _anthropic_client
+    if _anthropic_client is None:
+        with _client_lock:
+            if _anthropic_client is None:
+                api_key = os.environ.get("ANTHROPIC_API_KEY")
+                if not api_key:
+                    raise RuntimeError("ANTHROPIC_API_KEY environment variable is not set")
+                _anthropic_client = anthropic.Anthropic(api_key=api_key)
+    return _anthropic_client
+
 
 # ── Claude extraction prompt ──────────────────────────────────────────────────
 EXTRACTION_PROMPT = """You are extracting data from a Nigerian INEC EC8A election result sheet.
@@ -95,32 +121,54 @@ Rules:
 - Return ONLY the JSON object."""
 
 
-def image_to_base64_jpeg(image_bytes: bytes) -> str:
-    """Convert any image format to base64-encoded JPEG."""
+# ── Image helpers ─────────────────────────────────────────────────────────────
+
+def _normalize_image(image_bytes: bytes) -> Image.Image:
+    """Open image bytes, flatten transparency, return RGB PIL Image."""
     img = Image.open(io.BytesIO(image_bytes))
-    img.seek(0) if hasattr(img, "seek") else None
     if img.mode in ("P", "RGBA"):
         bg = Image.new("RGB", img.size, (255, 255, 255))
-        if img.mode == "P":
-            img = img.convert("RGBA")
-        bg.paste(img, mask=img.split()[3])
+        src = img.convert("RGBA") if img.mode == "P" else img
+        bg.paste(src, mask=src.split()[3])
         img = bg
     elif img.mode != "RGB":
         img = img.convert("RGB")
+    return img
+
+
+def make_thumbnails(image_bytes: bytes) -> tuple[bytes, bytes]:
+    """
+    Decode image once, return (thumb_jpeg_bytes, preview_jpeg_bytes).
+    thumb  = 80px wide   (feed row)
+    preview = 600px wide (lightbox)
+    """
+    img = _normalize_image(image_bytes)
+
+    def _resize_encode(src: Image.Image, max_w: int) -> bytes:
+        if src.width > max_w:
+            ratio = max_w / src.width
+            src = src.resize((max_w, int(src.height * ratio)), Image.LANCZOS)
+        buf = io.BytesIO()
+        src.save(buf, format="JPEG", quality=85)
+        return buf.getvalue()
+
+    return _resize_encode(img, 80), _resize_encode(img, 600)
+
+
+def image_to_base64_jpeg(image_bytes: bytes) -> str:
+    """Convert raw image bytes → base64 JPEG string (full resolution for Claude)."""
+    img = _normalize_image(image_bytes)
     buf = io.BytesIO()
-    img.save(buf, format="JPEG", quality=90)
+    img.save(buf, format="JPEG", quality=85)
     return base64.standard_b64encode(buf.getvalue()).decode()
 
 
 def extract_with_claude(image_bytes: bytes) -> dict:
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        raise RuntimeError("ANTHROPIC_API_KEY environment variable is not set")
-    client = anthropic.Anthropic(api_key=api_key)
+    client = get_anthropic_client()
     img_b64 = image_to_base64_jpeg(image_bytes)
 
     message = client.messages.create(
-        model="claude-opus-4-5",
+        model="claude-haiku-4-5-20251001",
         max_tokens=1024,
         messages=[{
             "role": "user",
@@ -168,6 +216,12 @@ def submit():
     if len(image_bytes) < 500:
         return jsonify({"error": "Image too small or empty"}), 400
 
+    # Generate thumbnails (single decode) before the slower Claude call
+    try:
+        thumb_bytes, preview_bytes = make_thumbnails(image_bytes)
+    except Exception:
+        thumb_bytes = preview_bytes = None
+
     try:
         extraction = extract_with_claude(image_bytes)
     except json.JSONDecodeError as e:
@@ -180,8 +234,10 @@ def submit():
     meta    = extraction.get("meta",    {})
     summary = extraction.get("summary", {})
 
+    record_id = str(uuid.uuid4())
+
     record = {
-        "id":           str(uuid.uuid4()),
+        "id":           record_id,
         "timestamp":    datetime.utcnow().isoformat(),
         "polling_unit": meta.get("polling_unit", ""),
         "pu_code":      meta.get("pu_code", ""),
@@ -192,12 +248,44 @@ def submit():
         "accredited":   summary.get("accredited_voters"),
         "quality":      flags.get("quality", "unknown"),
         "flags":        ", ".join(flags.get("unreadable_fields", [])),
+        "has_media":    thumb_bytes is not None,
     }
 
     with _lock:
         _results.append(record)
+        if thumb_bytes and preview_bytes:
+            _media[record_id] = {
+                "thumb":   thumb_bytes,
+                "preview": preview_bytes,
+            }
 
     return jsonify(extraction)
+
+
+@app.route("/thumb/<record_id>")
+def thumb(record_id: str):
+    with _lock:
+        media = _media.get(record_id)
+    if not media:
+        return Response(status=404)
+    return Response(
+        media["thumb"],
+        mimetype="image/jpeg",
+        headers={"Cache-Control": "public, max-age=86400"},
+    )
+
+
+@app.route("/preview/<record_id>")
+def preview(record_id: str):
+    with _lock:
+        media = _media.get(record_id)
+    if not media:
+        return Response(status=404)
+    return Response(
+        media["preview"],
+        mimetype="image/jpeg",
+        headers={"Cache-Control": "public, max-age=86400"},
+    )
 
 
 @app.route("/results")
@@ -220,6 +308,7 @@ def results():
 def reset():
     with _lock:
         _results.clear()
+        _media.clear()
     return jsonify({"ok": True})
 
 

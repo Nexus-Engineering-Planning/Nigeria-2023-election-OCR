@@ -1,4 +1,53 @@
-**Note we are still in the process of adding more data files to this repository.** 
+# Nigeria 2023 Election — OCR Pipeline & Dataset
+
+> **Data source:** [CCIJ / Veza News — Democracy Deferred](https://veza.news/article/2025/03/31/broken-promises-of-transparency-a-deep-dive-into-nigerias-2023-election-data/)
+> Part of the [E Don Kast](https://edonkast.com) electoral integrity platform by [StayGIS](https://staygis.com).
+
+## Extraction pipeline
+
+`ec8a_extract.py` reads INEC EC8A result sheet images using Claude Vision and extracts structured data into CSV and JSON.
+
+**Requirements:** Python 3.10+, Anthropic API key
+
+```bash
+pip install -r requirements.txt
+
+# Set your API key (Windows PowerShell)
+[System.Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "your_key_here", "User")
+
+# Run on a folder of images
+python ec8a_extract.py --input training_data/images --output results.csv
+
+# Limit to N images for testing
+python ec8a_extract.py --input training_data/images --limit 10
+```
+
+See `.env.example` for environment variable setup.
+
+**Output columns:** polling unit metadata · all 18 party votes (figures + words) · summary counts (registered, accredited, valid votes, rejected ballots) · quality flags (rotation, stamp obstruction, unreadable fields)
+
+## Dataset scripts
+
+| Script | Purpose |
+|---|---|
+| `build_training_data.py --all` | Download all ~169k EC8A images from DocumentCloud |
+| `convert_images.py` | Convert GIF images to PNG (RGB, white background) |
+| `split_dataset.py` | Stratified train / val / test / holdout split |
+
+## Data files
+
+| File | Description |
+|---|---|
+| `AllPollingUnitsInfo.csv` | Master list of all 176k polling units with DocumentCloud URLs |
+| `voter_info.csv` | Registered and accredited voter counts per unit |
+| `stamp_sig_missing.csv` | Stamp and signature quality labels |
+| `LGALevelResult.csv` | Official LGA-level vote totals (from FOIA) |
+| `training_data/annotations.csv` | Ground-truth labels for downloaded images |
+
+---
+
+**Note we are still in the process of adding more data files to this repository.**
+
 # Analyzing Nigeria's 2023 Election: Methodology
 
 ## Data Collection and Identifying Anomalies

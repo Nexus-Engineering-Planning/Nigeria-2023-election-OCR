@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E Don Kast — Scan Your Form</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -192,7 +192,13 @@
       </div>
     </div>
     <p class="pu-name" id="res-pu"></p>
-    <button class="btn-primary btn-ghost" style="margin-top:20px" onclick="reset()">
+    <a href="/dashboard" target="_blank" style="
+      display:block; text-align:center; margin-top:20px;
+      color:var(--teal); font-size:13px; font-weight:600;
+      text-decoration:none; letter-spacing:.03em;">
+      View live dashboard &rarr;
+    </a>
+    <button class="btn-primary btn-ghost" style="margin-top:10px" onclick="reset()">
       📷 Submit Another Form
     </button>
   </div>
@@ -201,9 +207,21 @@
 <script>
   let selectedFile = null;
 
+  const MAX_MB = 5;
+
   document.getElementById('file-input').addEventListener('change', function(e) {
     const file = e.target.files[0];
     if (!file) return;
+
+    if (file.size > MAX_MB * 1024 * 1024) {
+      const mb = (file.size / 1024 / 1024).toFixed(1);
+      const statusEl = document.getElementById('status');
+      statusEl.className   = 'status error';
+      statusEl.textContent = `⚠ Photo is ${mb} MB — please use a compressed or lower-resolution shot (under ${MAX_MB} MB)`;
+      document.getElementById('file-input').value = '';
+      return;
+    }
+
     selectedFile = file;
 
     const preview = document.getElementById('preview');
@@ -242,8 +260,13 @@
     const form = new FormData();
     form.append('image', selectedFile);
 
+    // 45-second timeout — Haiku is fast but give some slack for slow connections
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 45000);
+
     try {
-      const res  = await fetch('/submit', { method: 'POST', body: form });
+      const res  = await fetch('/submit', { method: 'POST', body: form, signal: controller.signal });
+      clearTimeout(timer);
       const data = await res.json();
 
       if (data.error) {
@@ -264,9 +287,12 @@
       document.getElementById('upload-state').style.display  = 'none';
       document.getElementById('success-state').style.display = 'block';
 
-    } catch {
+    } catch(err) {
+      clearTimeout(timer);
       statusEl.className   = 'status error';
-      statusEl.textContent = '⚠ Network error — please try again';
+      statusEl.textContent = err.name === 'AbortError'
+        ? '⚠ Taking too long — please try again'
+        : '⚠ Network error — please try again';
       submitBtn.disabled   = false;
     }
   }

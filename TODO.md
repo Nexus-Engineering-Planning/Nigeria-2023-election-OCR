@@ -3,14 +3,14 @@
 ## 1. Data Collection
 - [x] Download `AllPollingUnitsInfo.csv`, `voter_info.csv`, `stamp_sig_missing.csv`, `LGALevelResult.csv`
 - [x] Write `build_training_data.py` — stratified image sampler with annotations
-- [ ] Run full 500-image sample (`py build_training_data.py --sample 500`)
-- [ ] Expand to 2,000+ images for a production-grade training set
+- [x] Run full 500-image sample (`py build_training_data.py --sample 500`)
+- [ ] Expand to 2,000+ images for a production-grade training set (`py build_training_data.py --sample 2000`)
 - [ ] Add `LICENSE` file to clarify data reuse rights (e.g. CC BY 4.0)
 
 ## 2. Data Preparation
-- [ ] Convert downloaded `.gif` images to `.jpg`/`.png` for framework compatibility
-- [ ] Split into train / validation / test sets (e.g. 70/15/15)
-- [ ] Reserve ~10% as a **fixed hold-out benchmark** — never used in training
+- [x] Convert downloaded `.gif` images to `.png` for framework compatibility (`convert_images.py`)
+- [x] Split into train / validation / test / holdout sets — 70 / 15 / 10 / 5 (`split_dataset.py`)
+- [x] Reserve ~5% as a **fixed hold-out benchmark** — never used in training (`annotations_holdout.csv`)
 - [ ] Write a data dictionary documenting all column names in the CSVs
 
 ## 3. Model Training
