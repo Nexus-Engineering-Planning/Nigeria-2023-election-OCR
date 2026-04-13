@@ -118,6 +118,7 @@ Rules:
 - Use null for any field you cannot read with confidence.
 - For party votes: prefer the figures column. If obscured, use the words column.
 - quality = "good" if most fields readable; "poor" if stamp/blur affects some; "unreadable" if mostly unreadable.
+- unreadable_fields: list plain-English descriptions of what you could NOT read — e.g. "polling unit code", "ward name", "stamp", "APC votes", "unused ballots". Never use JSON field names or underscores.
 - Return ONLY the JSON object."""
 
 
@@ -242,19 +243,37 @@ def submit():
 
     record_id = str(uuid.uuid4())
 
+    lp_val   = parties.get("LP",   {}).get("figures")
+    apc_val  = parties.get("APC",  {}).get("figures")
+    pdp_val  = parties.get("PDP",  {}).get("figures")
+    nnpp_val = parties.get("NNPP", {}).get("figures")
+
+    # Duplicate detection — same LP + APC + PDP votes = almost certainly the same form
+    duplicate = False
+    with _lock:
+        for existing in _results:
+            if (
+                lp_val  is not None and lp_val  == existing.get("lp") and
+                apc_val is not None and apc_val == existing.get("apc") and
+                pdp_val == existing.get("pdp")
+            ):
+                duplicate = True
+                break
+
     record = {
         "id":           record_id,
         "timestamp":    datetime.utcnow().isoformat(),
         "polling_unit": meta.get("polling_unit", ""),
         "pu_code":      meta.get("pu_code", ""),
-        "lp":           parties.get("LP",   {}).get("figures"),
-        "apc":          parties.get("APC",  {}).get("figures"),
-        "pdp":          parties.get("PDP",  {}).get("figures"),
-        "nnpp":         parties.get("NNPP", {}).get("figures"),
+        "lp":           lp_val,
+        "apc":          apc_val,
+        "pdp":          pdp_val,
+        "nnpp":         nnpp_val,
         "accredited":   summary.get("accredited_voters"),
         "quality":      flags.get("quality", "unknown"),
         "flags":        ", ".join(flags.get("unreadable_fields", [])),
         "has_media":    thumb_bytes is not None,
+        "duplicate":    duplicate,
     }
 
     with _lock:

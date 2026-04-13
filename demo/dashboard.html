@@ -45,9 +45,9 @@
     margin-bottom: 28px;
   }
   .logo-area { display: flex; align-items: center; gap: 12px; }
-  .logo-area img { width: 56px; height: 56px; }
-  .logo-text { font-size: 28px; font-weight: 900; color: var(--teal); }
-  .ward-info { font-size: 13px; color: var(--slate); margin-top: 2px; }
+  .logo-area img { width: 68px; height: 68px; }
+  .logo-text { font-size: 34px; font-weight: 900; color: var(--teal); }
+  .ward-info { font-size: 14px; color: var(--slate); margin-top: 3px; }
 
   .live-badge {
     display: flex;
@@ -137,12 +137,12 @@
   .comp-row:last-child { border-bottom: none; }
   .comp-row.header-row { padding: 0 0 10px; }
   .comp-label { font-size: 14px; color: #c8d8e8; }
-  .comp-vals { display: flex; gap: 48px; }
-  .comp-val { text-align: right; min-width: 80px; }
-  .comp-val .val-label { font-size: 10px; color: var(--slate); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 2px; display: flex; align-items: center; gap: 5px; justify-content: flex-end; }
-  .party-logo { width: 18px; height: 18px; object-fit: contain; border-radius: 3px; flex-shrink: 0; }
-  .party-logo-sm { width: 14px; height: 14px; object-fit: contain; border-radius: 2px; flex-shrink: 0; vertical-align: middle; margin-right: 3px; }
-  .comp-val .val-num { font-size: 22px; font-weight: 800; }
+  .comp-vals { display: flex; gap: 52px; }
+  .comp-val { text-align: right; min-width: 100px; }
+  .comp-val .val-label { font-size: 13px; color: var(--slate); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; justify-content: flex-end; }
+  .party-logo { width: 28px; height: 28px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
+  .party-logo-sm { width: 18px; height: 18px; object-fit: contain; border-radius: 3px; flex-shrink: 0; vertical-align: middle; margin-right: 4px; }
+  .comp-val .val-num { font-size: 26px; font-weight: 800; }
 
   /* ── Discrepancy box ── */
   .discrepancy {
@@ -185,7 +185,7 @@
     align-items: center;
     padding: 0 0 10px;
     border-bottom: 1px solid var(--border);
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: .1em;
     color: var(--slate);
@@ -197,7 +197,7 @@
   .feed-table-head .head-thumb-spacer {
     width: 48px; flex-shrink: 0;
   }
-  .feed-table-head .cols { display: flex; gap: 40px; }
+  .feed-table-head .cols { display: flex; gap: 44px; }
 
   .feed-empty {
     text-align: center;
@@ -240,7 +240,7 @@
   }
   .feed-pu { color: #c8d8e8; }
   .feed-flags { font-size: 11px; color: var(--slate); margin-top: 2px; }
-  .feed-cols { display: flex; gap: 40px; align-items: center; }
+  .feed-cols { display: flex; gap: 44px; align-items: center; }
   .feed-lp  { font-weight: 700; color: var(--lp);  min-width: 36px; text-align: right; }
   .feed-apc { font-weight: 700; color: var(--apc); min-width: 36px; text-align: right; }
   .quality-good { color: #34d399; font-size: 11px; min-width: 68px; text-align: right; }
@@ -255,9 +255,20 @@
     gap: 8px;
     margin-top: 3px;
     flex-wrap: wrap;
+    align-items: center;
   }
   .feed-pdp  { color: var(--pdp);  font-weight: 600; }
   .feed-nnpp { color: var(--nnpp); font-weight: 600; }
+  .feed-dupe {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    color: #fbbf24;
+    background: rgba(251,191,36,.1);
+    border: 1px solid rgba(251,191,36,.3);
+    border-radius: 4px;
+    padding: 1px 6px;
+  }
 
   /* ── Connection status ── */
   .conn-badge {
@@ -503,11 +514,25 @@
                  onclick="openLightbox('/preview/${r.id}','${puLabel.replace(/'/g,"\\'")}')">`
             : `<div class="feed-thumb-placeholder"></div>`;
 
-          // Secondary party figures (PDP, NNPP) + flags — shown below PU name
+          // Clean up any raw JSON field names that slip through from Claude
+          function cleanFlags(str) {
+            return str
+              .replace(/number_of_/gi, '')
+              .replace(/_/g, ' ')
+              .split(',')
+              .map(s => s.trim())
+              .filter(Boolean)
+              .map(s => s.charAt(0).toUpperCase() + s.slice(1))
+              .map(s => s.replace(/\bPu\b/g, 'PU').replace(/\bLga\b/g, 'LGA').replace(/\bInec\b/g, 'INEC'))
+              .join(' · ');
+          }
+
+          // Secondary party figures (PDP, NNPP) + flags + duplicate badge
           const secParts = [];
+          if (r.duplicate) secParts.push(`<span class="feed-dupe">POSSIBLE DUPLICATE</span>`);
           if (r.pdp  != null) secParts.push(`<span class="feed-pdp"><img src="/static/logo-pdp.jpg" class="party-logo-sm" alt="">PDP&nbsp;${r.pdp}</span>`);
           if (r.nnpp != null) secParts.push(`<span class="feed-nnpp"><img src="/static/logo-nnpp.jpg" class="party-logo-sm" alt="">NNPP&nbsp;${r.nnpp}</span>`);
-          if (r.flags)        secParts.push(`<span class="feed-flags">${r.flags}</span>`);
+          if (r.flags)        secParts.push(`<span class="feed-flags">${cleanFlags(r.flags)}</span>`);
           const secHtml = secParts.length
             ? `<div class="feed-secondary">${secParts.join('')}</div>`
             : '';
