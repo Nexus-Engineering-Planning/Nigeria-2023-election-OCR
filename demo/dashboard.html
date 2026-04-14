@@ -353,11 +353,11 @@
       <div class="disc-title">⚠ Discrepancy Detected</div>
       <div class="disc-grid">
         <div>
-          <div class="disc-label">LP votes unaccounted for</div>
+          <div class="disc-label">Fewer LP votes than INEC reported</div>
           <div class="disc-val">−64,692</div>
         </div>
         <div>
-          <div class="disc-label">APC votes with no EC8A record</div>
+          <div class="disc-label">More APC votes than INEC reported</div>
           <div class="disc-val">+63,259</div>
         </div>
       </div>
@@ -415,11 +415,11 @@
     <div class="disc-title">⚠ Discrepancy Detected</div>
     <div class="disc-grid">
       <div>
-        <div class="disc-label">LP votes unaccounted for</div>
+        <div class="disc-label">Fewer LP votes than INEC reported</div>
         <div class="disc-val" id="disc-lp">—</div>
       </div>
       <div>
-        <div class="disc-label">APC votes with no EC8A record</div>
+        <div class="disc-label">More APC votes than INEC reported</div>
         <div class="disc-val" id="disc-apc">—</div>
       </div>
     </div>
@@ -491,7 +491,8 @@
     document.getElementById('field-lp').classList.toggle('lp-active',  lpVal  !== null);
     document.getElementById('field-apc').classList.toggle('apc-active', apcVal !== null);
 
-    if (lpVal === null || apcVal === null) {
+    // Need both INEC values AND at least one scanned form before comparing
+    if (lpVal === null || apcVal === null || (scannedLP === 0 && scannedAPC === 0)) {
       document.getElementById('disc-box').classList.remove('visible');
       return;
     }
