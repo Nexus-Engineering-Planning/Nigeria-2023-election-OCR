@@ -10,581 +10,575 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --teal:      oklch(0.6333 0.1128 178.7);
-    --teal-dim:  oklch(0.6333 0.1128 178.7 / 0.10);
-    --teal-mid:  oklch(0.6333 0.1128 178.7 / 0.20);
-    --orange:    #fb923c;
-    --bg:        #0a1628;
-    --card:      #162032;
-    --border:    #1e3050;
-    --slate:     #8899aa;
-    --red:       #f87171;
-    --red-bg:    rgba(30,6,6,0.8);
+    --teal:       oklch(0.6333 0.1128 178.7);
+    --teal-dim:   oklch(0.6333 0.1128 178.7 / 0.10);
+    --bg:         #0a1628;
+    --card:       #162032;
+    --border:     #1e3050;
+    --slate:      #8899aa;
+    --red:        #f87171;
+    --red-bg:     rgba(248,113,113,0.12);
     --red-border: #ef4444;
-
-    /* Official Nigerian party colours */
-    --lp:    #E30613;   /* Labour Party */
-    --apc:   #00A650;   /* All Progressives Congress */
-    --pdp:   #9B2335;   /* Peoples Democratic Party */
-    --nnpp:  #F5A623;   /* New Nigeria Peoples Party */
+    --lp:         #E30613;
+    --apc:        #00A650;
+    --pdp:        #9B2335;
+    --nnpp:       #F5A623;
   }
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
-    color: #fff;
-    min-height: 100vh;
-    padding: 28px 32px;
+    background: var(--bg); color: #fff;
+    min-height: 100vh; padding: 24px 32px;
   }
-  .page-wrap {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+  .page-wrap { max-width: 1100px; margin: 0 auto; }
 
   /* ── Header ── */
   header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 28px;
+    display: flex; align-items: center;
+    justify-content: space-between; margin-bottom: 20px;
   }
   .logo-area { display: flex; align-items: center; gap: 12px; }
   .logo-area img { width: 68px; height: 68px; }
   .logo-text { font-size: 34px; font-weight: 900; color: var(--teal); }
   .ward-info { font-size: 14px; color: var(--slate); margin-top: 3px; }
-
+  .header-right { display: flex; align-items: center; gap: 10px; }
   .live-badge {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--teal);
-    letter-spacing: .06em;
+    display: flex; align-items: center; gap: 7px;
+    font-size: 12px; font-weight: 600; color: var(--teal); letter-spacing: .06em;
   }
   .live-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--teal);
-    animation: pulse 1.4s ease-in-out infinite;
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--teal); animation: pulse 1.4s ease-in-out infinite;
   }
   @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50%       { opacity: 0.4; transform: scale(0.8); }
+    0%,100% { opacity:1; transform:scale(1); }
+    50%     { opacity:.4; transform:scale(.8); }
   }
-
+  .conn-badge {
+    display: none; align-items: center; gap: 6px;
+    font-size: 11px; font-weight: 600; color: var(--red);
+    background: rgba(239,68,68,.12); border: 1px solid rgba(239,68,68,.3);
+    border-radius: 8px; padding: 5px 10px;
+  }
+  .conn-badge.visible { display: flex; }
   .reset-btn {
-    margin-left: 16px;
-    font-size: 12px;
-    color: var(--slate);
-    background: none;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 6px 12px;
-    cursor: pointer;
-    font-family: inherit;
-    transition: color .15s;
+    font-size: 12px; color: var(--slate); background: none;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 6px 12px; cursor: pointer; font-family: inherit; transition: color .15s;
   }
   .reset-btn:hover { color: #fff; }
 
-  /* ── Counter grid ── */
-  .counters {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 16px;
-    margin-bottom: 20px;
+  /* ── View toggle ── */
+  .view-toggle {
+    display: flex; background: var(--card);
+    border-radius: 14px; padding: 5px; gap: 4px; margin-bottom: 22px;
   }
-  .counter-card {
-    background: var(--card);
-    border-radius: 18px;
-    padding: 22px;
-    text-align: center;
+  .toggle-btn {
+    flex: 1; padding: 14px 24px; border: none; border-radius: 10px;
+    font-size: 17px; font-weight: 700; cursor: pointer;
+    font-family: inherit; letter-spacing: .01em;
+    transition: background .2s, color .2s;
   }
-  .counter-num {
-    font-size: 54px;
-    font-weight: 900;
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-  .counter-label {
-    font-size: 11px;
-    color: var(--slate);
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    font-weight: 600;
-  }
-  .count-with-us {
-    background: var(--card);
-    border-radius: 18px;
-    padding: 22px;
-  }
-  .count-with-us-title {
-    font-size: 15px;
-    font-weight: 800;
-    color: var(--teal);
-    text-align: center;
-    margin-bottom: 3px;
-  }
-  .count-with-us-sub {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--slate);
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    text-align: center;
-    margin-bottom: 14px;
-  }
-  .count-with-us-row {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .count-with-us-row .counter-num { font-size: 54px; }
-  .count-with-us-item { text-align: center; }
-  .teal    { color: var(--teal); }     /* UI brand only */
-  .orange  { color: var(--orange); }   /* UI brand only */
-  .lp-num  { color: var(--lp);   }
-  .apc-num { color: var(--apc);  }
+  .toggle-btn.active   { background: var(--teal); color: #0a1628; }
+  .toggle-btn:not(.active) { background: transparent; color: var(--slate); }
+  .toggle-btn:not(.active):hover { background: rgba(255,255,255,.07); color: #fff; }
 
-  /* ── Comparison table ── */
-  .comparison {
-    background: var(--card);
-    border-radius: 18px;
-    padding: 22px 24px;
-    margin-bottom: 16px;
-  }
-  .section-title {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    color: #e2eaf4;
-  }
+  /* ── Shared ── */
+  .card { background: var(--card); border-radius: 18px; padding: 28px 30px; margin-bottom: 16px; }
+  .section-title { font-size: 16px; font-weight: 700; color: #e2eaf4; margin-bottom: 6px; }
+  .section-sub   { font-size: 13px; color: var(--slate); margin-bottom: 20px; }
+  /* Larger title specifically for the Finding tab — projected screen */
+  .finding-title { font-size: 26px; font-weight: 800; color: #e2eaf4; margin-bottom: 8px; }
+  .finding-sub   { font-size: 14px; color: var(--slate); margin-bottom: 24px; }
+  .lp-num  { color: var(--lp);  }
+  .apc-num { color: var(--apc); }
+  .teal    { color: var(--teal); }
+  .party-logo    { width:28px; height:28px; object-fit:contain; border-radius:4px; flex-shrink:0; }
+  .party-logo-sm { width:18px; height:18px; object-fit:contain; border-radius:3px; flex-shrink:0; vertical-align:middle; margin-right:4px; }
+
+  /* ════════════════════════════
+     TAB 1 — THE FINDING
+  ════════════════════════════ */
   .comp-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 13px 0;
-    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 0; border-bottom: 1px solid var(--border);
   }
   .comp-row:last-child { border-bottom: none; }
-  .comp-row.header-row { padding: 0 0 10px; }
-  .comp-label { font-size: 14px; color: #c8d8e8; }
-  .comp-vals { display: flex; gap: 52px; }
-  .comp-val { text-align: right; min-width: 100px; }
-  .comp-val .val-label { font-size: 13px; color: var(--slate); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; justify-content: flex-end; }
-  .party-logo { width: 28px; height: 28px; object-fit: contain; border-radius: 4px; flex-shrink: 0; }
-  .party-logo-sm { width: 18px; height: 18px; object-fit: contain; border-radius: 3px; flex-shrink: 0; vertical-align: middle; margin-right: 4px; }
-  .comp-val .val-num { font-size: 26px; font-weight: 800; }
+  .comp-row.header-row { padding: 0 0 12px; }
+  .comp-label { font-size: 15px; color: #c8d8e8; }
+  .comp-vals  { display: flex; gap: 60px; }
+  .comp-val   { text-align: right; min-width: 110px; }
+  .comp-val .val-label {
+    font-size: 13px; color: var(--slate); text-transform: uppercase;
+    letter-spacing: .08em; margin-bottom: 4px;
+    display: flex; align-items: center; gap: 6px; justify-content: flex-end;
+  }
+  .comp-val .val-num { font-size: 32px; font-weight: 800; }
 
-  /* ── Discrepancy (now inside comparison card) ── */
-  .discrepancy {
+  /* Discrepancy flush to card bottom — Finding tab */
+  .disc-finding {
     border-top: 2px solid var(--red-border);
     background: var(--red-bg);
-    margin: 16px -24px -22px;
-    padding: 18px 24px 20px;
+    margin: 20px -30px -28px;
+    padding: 22px 30px 26px;
     border-radius: 0 0 18px 18px;
   }
-  .disc-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--red);
-    margin-bottom: 12px;
-  }
-  .disc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .disc-item .disc-label { font-size: 11px; color: rgba(248,113,113,.6); margin-bottom: 4px; text-transform: uppercase; letter-spacing: .07em; }
-  .disc-item .disc-val { font-size: 28px; font-weight: 900; color: #fca5a5; }
+  .disc-title { font-size: 14px; font-weight: 700; color: var(--red); margin-bottom: 14px; }
+  .disc-grid  { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .disc-label { font-size: 11px; color: rgba(248,113,113,.65); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 5px; }
+  .disc-val   { font-size: 44px; font-weight: 900; color: #fca5a5; line-height: 1; }
 
-  /* ── Submissions feed ── */
-  .feed {
-    background: var(--card);
-    border-radius: 18px;
-    padding: 22px 24px;
-  }
-  .feed-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 14px;
-  }
-  .feed-count { font-size: 12px; color: var(--slate); font-weight: 500; }
+  /* ════════════════════════════
+     TAB 2 — COUNT WITH US
+  ════════════════════════════ */
 
+  /* Counter cards */
+  .counters {
+    display: grid; grid-template-columns: 1fr 2fr;
+    gap: 16px; margin-bottom: 16px;
+  }
+  .counter-card {
+    background: var(--card); border-radius: 18px;
+    padding: 26px 22px; text-align: center;
+  }
+  .counter-num { font-size: 60px; font-weight: 900; line-height: 1; margin-bottom: 8px; }
+  .counter-label {
+    font-size: 14px; color: var(--slate);
+    text-transform: uppercase; letter-spacing: .08em; font-weight: 600;
+  }
+  .count-with-us { background: var(--card); border-radius: 18px; padding: 26px 22px; }
+  .count-with-us-title { font-size: 16px; font-weight: 800; color: var(--teal); text-align: center; margin-bottom: 3px; }
+  .count-with-us-sub   { font-size: 11px; font-weight: 500; color: var(--slate); text-transform: uppercase; letter-spacing: .08em; text-align: center; margin-bottom: 16px; }
+  .count-with-us-row   { display: flex; justify-content: space-around; align-items: center; }
+  .count-with-us-item  { text-align: center; }
+
+  /* INEC input card */
+  .inec-card {
+    background: var(--card); border-radius: 18px;
+    padding: 22px 28px; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+  }
+  .inec-prompt { flex: 1; min-width: 180px; }
+  .inec-prompt-title { font-size: 15px; font-weight: 700; color: #e2eaf4; margin-bottom: 3px; }
+  .inec-prompt-sub   { font-size: 12px; color: var(--slate); }
+  .inec-inputs { display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; }
+  .inec-field  { text-align: center; }
+  .inec-field label {
+    display: flex; align-items: center; justify-content: center;
+    gap: 6px; font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px;
+  }
+  .inec-field input {
+    width: 120px; background: var(--bg);
+    border: 2px solid var(--border); border-radius: 10px;
+    color: #fff; font-family: inherit;
+    font-size: 22px; font-weight: 800;
+    text-align: center; padding: 10px 8px;
+    outline: none; transition: border-color .15s;
+    -moz-appearance: textfield;
+  }
+  .inec-field input::-webkit-outer-spin-button,
+  .inec-field input::-webkit-inner-spin-button { -webkit-appearance: none; }
+  .inec-field input:focus { border-color: var(--teal); }
+  .inec-field.lp-active  input { border-color: var(--lp);  }
+  .inec-field.apc-active input { border-color: var(--apc); }
+  .inec-clear {
+    font-size: 12px; color: var(--slate); background: none;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 6px 12px; cursor: pointer; font-family: inherit;
+    transition: color .15s; align-self: center;
+  }
+  .inec-clear:hover { color: #fff; }
+
+  /* Dynamic discrepancy — Count With Us tab */
+  @keyframes discReveal {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .disc-dynamic {
+    background: var(--red-bg); border: 2px solid var(--red-border);
+    border-radius: 18px; padding: 22px 28px; margin-bottom: 16px;
+    display: none;
+  }
+  .disc-dynamic.visible { display: block; animation: discReveal .45s ease; }
+  .disc-dynamic .disc-note {
+    font-size: 13px; color: rgba(248,113,113,.65); margin-top: 14px;
+  }
+
+  /* Feed */
+  .feed { background: var(--card); border-radius: 18px; padding: 22px 24px; }
+  .feed-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+  .feed-count  { font-size: 12px; color: var(--slate); font-weight: 500; }
   .feed-table-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0 10px;
-    border-bottom: 1px solid var(--border);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    color: var(--slate);
-    font-weight: 600;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 0 10px; border-bottom: 1px solid var(--border);
+    font-size: 12px; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--slate); font-weight: 600;
   }
-  .feed-table-head .head-left {
-    display: flex; align-items: center; gap: 12px;
-  }
-  .feed-table-head .head-thumb-spacer {
-    width: 48px; flex-shrink: 0;
-  }
+  .feed-table-head .head-left { display: flex; align-items: center; gap: 12px; }
+  .feed-table-head .head-thumb-spacer { width: 48px; flex-shrink: 0; }
   .feed-table-head .cols { display: flex; gap: 44px; }
-
   #feed-list {
-    max-height: 420px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--border) transparent;
+    max-height: 380px; overflow-y: auto;
+    scrollbar-width: thin; scrollbar-color: var(--border) transparent;
   }
   #feed-list::-webkit-scrollbar { width: 4px; }
   #feed-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
-  .feed-empty {
-    text-align: center;
-    color: var(--slate);
-    font-size: 14px;
-    padding: 32px 0;
-  }
-
+  .feed-empty { text-align: center; color: var(--slate); font-size: 14px; padding: 32px 0; }
   .feed-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
-    animation: slideIn .35s ease;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+    font-size: 14px; animation: slideIn .35s ease;
   }
   @keyframes slideIn {
-    from { opacity: 0; transform: translateY(-6px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from { opacity:0; transform:translateY(-6px); }
+    to   { opacity:1; transform:translateY(0); }
   }
   .feed-item:last-child { border-bottom: none; }
   .feed-left { display: flex; align-items: center; gap: 12px; }
   .feed-thumb {
-    width: 48px; height: 48px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: opacity .15s, transform .15s;
+    width: 48px; height: 48px; object-fit: cover;
+    border-radius: 6px; border: 1px solid var(--border);
+    cursor: pointer; flex-shrink: 0; transition: opacity .15s, transform .15s;
   }
-  .feed-thumb:hover { opacity: 0.85; transform: scale(1.05); }
+  .feed-thumb:hover { opacity:.85; transform:scale(1.05); }
   .feed-thumb-placeholder {
-    width: 48px; height: 48px;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    background: var(--bg);
-    flex-shrink: 0;
+    width: 48px; height: 48px; border-radius: 6px;
+    border: 1px solid var(--border); background: var(--bg); flex-shrink: 0;
   }
-  .feed-pu { color: #c8d8e8; }
+  .feed-pu    { color: #c8d8e8; }
   .feed-flags { font-size: 11px; color: var(--slate); margin-top: 2px; }
-  .feed-cols { display: flex; gap: 44px; align-items: center; }
-  .feed-lp  { font-weight: 700; color: var(--lp);  min-width: 36px; text-align: right; }
-  .feed-apc { font-weight: 700; color: var(--apc); min-width: 36px; text-align: right; }
-  .quality-good { color: #34d399; font-size: 11px; min-width: 68px; text-align: right; }
-  .quality-poor { color: #fbbf24; font-size: 11px; min-width: 68px; text-align: right; }
-  .quality-bad  { color: var(--red); font-size: 11px; min-width: 68px; text-align: right; }
-
-  /* Secondary party figures (PDP, NNPP) under PU name */
+  .feed-cols  { display: flex; gap: 44px; align-items: center; }
+  .feed-lp    { font-weight:700; color:var(--lp);  min-width:36px; text-align:right; }
+  .feed-apc   { font-weight:700; color:var(--apc); min-width:36px; text-align:right; }
+  .quality-good { color:#34d399; font-size:11px; min-width:68px; text-align:right; }
+  .quality-poor { color:#fbbf24; font-size:11px; min-width:68px; text-align:right; }
+  .quality-bad  { color:var(--red); font-size:11px; min-width:68px; text-align:right; }
   .feed-secondary {
-    font-size: 11px;
-    color: var(--slate);
-    display: flex;
-    gap: 8px;
-    margin-top: 3px;
-    flex-wrap: wrap;
-    align-items: center;
+    font-size: 11px; color: var(--slate);
+    display: flex; gap: 8px; margin-top: 3px; flex-wrap: wrap; align-items: center;
   }
-  .feed-pdp  { color: var(--pdp);  font-weight: 600; }
-  .feed-nnpp { color: var(--nnpp); font-weight: 600; }
+  .feed-pdp  { color:var(--pdp);  font-weight:600; }
+  .feed-nnpp { color:var(--nnpp); font-weight:600; }
   .feed-dupe {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: .05em;
-    color: #fbbf24;
-    background: rgba(251,191,36,.1);
-    border: 1px solid rgba(251,191,36,.3);
-    border-radius: 4px;
-    padding: 1px 6px;
+    font-size:10px; font-weight:700; letter-spacing:.05em; color:#fbbf24;
+    background:rgba(251,191,36,.1); border:1px solid rgba(251,191,36,.3);
+    border-radius:4px; padding:1px 6px;
   }
-
-  /* ── Connection status ── */
-  .conn-badge {
-    display: none;
-    align-items: center;
-    gap: 6px;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--red);
-    background: rgba(239,68,68,.12);
-    border: 1px solid rgba(239,68,68,.3);
-    border-radius: 8px;
-    padding: 5px 10px;
-    margin-left: 12px;
-  }
-  .conn-badge.visible { display: flex; }
 
   /* ── Lightbox ── */
   .lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.85);
-    z-index: 999;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(4px);
-    padding: 48px 20px 32px;   /* top padding so close btn is never clipped */
+    display:none; position:fixed; inset:0; background:rgba(0,0,0,.85);
+    z-index:999; align-items:center; justify-content:center;
+    backdrop-filter:blur(4px); padding:48px 20px 32px;
   }
-  .lightbox.open { display: flex; }
-  .lightbox-inner {
-    position: relative;
-    max-width: min(92vw, 680px);
-    width: 100%;
-  }
+  .lightbox.open { display:flex; }
+  .lightbox-inner { position:relative; max-width:min(92vw,680px); width:100%; }
   .lightbox-img {
-    width: 100%;
-    height: auto;
-    max-height: calc(100vh - 120px);
-    object-fit: contain;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    display: block;
+    width:100%; height:auto; max-height:calc(100vh - 120px);
+    object-fit:contain; border-radius:12px; border:1px solid var(--border); display:block;
   }
-  .lightbox-meta {
-    text-align: center;
-    font-size: 12px;
-    color: rgba(255,255,255,.55);
-    margin-top: 10px;
-  }
+  .lightbox-meta { text-align:center; font-size:12px; color:rgba(255,255,255,.55); margin-top:10px; }
   .lightbox-close {
-    position: absolute;
-    top: -36px; right: 0;
-    background: none; border: none;
-    color: rgba(255,255,255,.7);
-    font-size: 26px;
-    cursor: pointer;
-    line-height: 1;
-    padding: 4px 8px;
+    position:absolute; top:-36px; right:0; background:none; border:none;
+    color:rgba(255,255,255,.7); font-size:26px; cursor:pointer; line-height:1; padding:4px 8px;
   }
-  .lightbox-close:hover { color: #fff; }
+  .lightbox-close:hover { color:#fff; }
 
-  .footer {
-    text-align: center;
-    font-size: 11px;
-    color: rgba(136,153,170,.35);
-    margin-top: 24px;
-  }
+  .footer { text-align:center; font-size:11px; color:rgba(136,153,170,.35); margin-top:24px; }
 </style>
 </head>
 <body>
-
 <div class="page-wrap">
+
 <!-- ── Header ── -->
 <header>
   <div class="logo-area">
     <img src="/static/edk-logo.svg" alt="E Don Kast" onerror="this.style.display='none'">
     <div>
       <div class="logo-text">E Don Kast</div>
-      <div class="ward-info" id="ward-info">Obio-Akpor LGA · Rivers State · Live Demo</div>
+      <div class="ward-info">Obio-Akpor LGA · Rivers State · Live Demo</div>
     </div>
   </div>
-  <div style="display:flex;align-items:center">
-    <div class="live-badge">
-      <span class="live-dot"></span>
-      LIVE
-    </div>
+  <div class="header-right">
+    <div class="live-badge"><span class="live-dot"></span>LIVE</div>
     <div class="conn-badge" id="conn-badge">&#9888; Reconnecting…</div>
     <button class="reset-btn" onclick="resetDemo()">Reset</button>
   </div>
 </header>
 
-<!-- ── Counters ── -->
-<div class="counters">
-  <div class="counter-card">
-    <div class="counter-num teal" id="count">0</div>
-    <div class="counter-label">Forms Submitted</div>
-  </div>
-  <div class="count-with-us">
-    <div class="count-with-us-title">Count With Us</div>
-    <div class="count-with-us-sub">Scanned with our ADC audience</div>
-    <div class="count-with-us-row">
-      <div class="count-with-us-item">
-        <div class="counter-num lp-num" id="lp-total">0</div>
-        <div class="counter-label">LP Votes</div>
+<!-- ── View toggle ── -->
+<div class="view-toggle">
+  <button class="toggle-btn active" id="btn-finding" onclick="showView('finding')">The Finding</button>
+  <button class="toggle-btn"        id="btn-demo"    onclick="showView('demo')">Count With Us</button>
+</div>
+
+<!-- ════════════════════════════
+     TAB 1 — THE FINDING
+════════════════════════════ -->
+<div id="view-finding">
+  <div class="card">
+    <div class="finding-title">The Known Finding — Obio-Akpor LGA Presidential Result</div>
+    <div class="finding-sub">Source: CCIJ / Veza News — 169,000+ EC8A polling unit forms digitized nationally</div>
+
+    <div class="comp-row header-row">
+      <span></span>
+      <div class="comp-vals">
+        <div class="comp-val">
+          <div class="val-label lp-num"><img src="/static/logo-lp.jpg" class="party-logo" alt="LP">LP Votes</div>
+        </div>
+        <div class="comp-val">
+          <div class="val-label apc-num"><img src="/static/logo-apc.jpg" class="party-logo" alt="APC">APC Votes</div>
+        </div>
       </div>
-      <div class="count-with-us-item">
-        <div class="counter-num apc-num" id="apc-total">0</div>
-        <div class="counter-label">APC Votes</div>
+    </div>
+
+    <div class="comp-row">
+      <div class="comp-label">EC8A Forms (what polling unit sheets show)</div>
+      <div class="comp-vals">
+        <div class="comp-val"><div class="val-num lp-num" id="ec8a-lp">68,521</div></div>
+        <div class="comp-val"><div class="val-num apc-num" id="ec8a-apc">16,980</div></div>
+      </div>
+    </div>
+
+    <div class="comp-row">
+      <div class="comp-label">INEC Official Declared Result</div>
+      <div class="comp-vals">
+        <div class="comp-val"><div class="val-num lp-num">3,829</div></div>
+        <div class="comp-val"><div class="val-num apc-num">80,239</div></div>
+      </div>
+    </div>
+
+    <div class="disc-finding">
+      <div class="disc-title">⚠ Discrepancy Detected</div>
+      <div class="disc-grid">
+        <div>
+          <div class="disc-label">LP votes unaccounted for</div>
+          <div class="disc-val">−64,692</div>
+        </div>
+        <div>
+          <div class="disc-label">APC votes with no EC8A record</div>
+          <div class="disc-val">+63,259</div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ── Comparison + Discrepancy ── -->
-<div class="comparison">
-  <div class="section-title">The Known Finding — Obio-Akpor LGA Presidential Result</div>
-  <div style="font-size:12px; color:var(--slate); margin-bottom:14px;">
-    Source: CCIJ / Veza News — 169,000+ EC8A polling unit forms digitized nationally
-  </div>
-  <div class="comp-row header-row">
-    <span></span>
-    <div class="comp-vals">
-      <div class="comp-val"><div class="val-label lp-num"><img src="/static/logo-lp.jpg" class="party-logo" alt="LP">LP Votes</div></div>
-      <div class="comp-val"><div class="val-label apc-num"><img src="/static/logo-apc.jpg" class="party-logo" alt="APC">APC Votes</div></div>
+<!-- ════════════════════════════
+     TAB 2 — COUNT WITH US
+════════════════════════════ -->
+<div id="view-demo" style="display:none">
+
+  <div class="counters">
+    <div class="counter-card">
+      <div class="counter-num teal" id="count">0</div>
+      <div class="counter-label">Forms Submitted</div>
     </div>
-  </div>
-  <div class="comp-row">
-    <div class="comp-label">EC8A Forms (what polling unit sheets show)</div>
-    <div class="comp-vals">
-      <div class="comp-val"><div class="val-num lp-num" id="ec8a-lp">68,521</div></div>
-      <div class="comp-val"><div class="val-num apc-num" id="ec8a-apc">16,980</div></div>
-    </div>
-  </div>
-  <div class="comp-row">
-    <div class="comp-label">INEC Official Declared Result</div>
-    <div class="comp-vals">
-      <div class="comp-val"><div class="val-num lp-num">3,829</div></div>
-      <div class="comp-val"><div class="val-num apc-num">80,239</div></div>
+    <div class="count-with-us">
+      <div class="count-with-us-title">Count With Us</div>
+      <div class="count-with-us-sub">Scanned with our ADC audience</div>
+      <div class="count-with-us-row">
+        <div class="count-with-us-item">
+          <div class="counter-num lp-num" id="lp-total">0</div>
+          <div class="counter-label">LP Votes</div>
+        </div>
+        <div class="count-with-us-item">
+          <div class="counter-num apc-num" id="apc-total">0</div>
+          <div class="counter-label">APC Votes</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Discrepancy summary — flush bottom of card -->
-  <div class="discrepancy" id="disc-box">
+  <!-- INEC declaration inputs -->
+  <div class="inec-card">
+    <div class="inec-prompt">
+      <div class="inec-prompt-title">Enter INEC's Declared Result</div>
+      <div class="inec-prompt-sub">Ask the audience — then type in the official declared numbers</div>
+    </div>
+    <div class="inec-inputs">
+      <div class="inec-field" id="field-lp">
+        <label class="lp-num"><img src="/static/logo-lp.jpg" class="party-logo-sm" alt="">LP</label>
+        <input type="number" id="inec-lp" min="0" placeholder="0" oninput="updateDiscrepancy()">
+      </div>
+      <div class="inec-field" id="field-apc">
+        <label class="apc-num"><img src="/static/logo-apc.jpg" class="party-logo-sm" alt="">APC</label>
+        <input type="number" id="inec-apc" min="0" placeholder="0" oninput="updateDiscrepancy()">
+      </div>
+      <button class="inec-clear" onclick="clearINEC()">Clear</button>
+    </div>
+  </div>
+
+  <!-- Dynamic discrepancy -->
+  <div class="disc-dynamic" id="disc-box">
     <div class="disc-title">⚠ Discrepancy Detected</div>
     <div class="disc-grid">
-      <div class="disc-item">
+      <div>
         <div class="disc-label">LP votes unaccounted for</div>
-        <div class="disc-val">−64,692</div>
+        <div class="disc-val" id="disc-lp">—</div>
       </div>
-      <div class="disc-item">
+      <div>
         <div class="disc-label">APC votes with no EC8A record</div>
-        <div class="disc-val">+63,259</div>
+        <div class="disc-val" id="disc-apc">—</div>
       </div>
     </div>
+    <div class="disc-note" id="disc-note"></div>
   </div>
-</div>
 
-<!-- ── Feed ── -->
-<div class="feed">
-  <div class="feed-header">
-    <div class="section-title" style="margin:0">Live Verification Feed</div>
-    <div class="feed-count" id="feed-count"></div>
-  </div>
-  <div class="feed-table-head">
-    <div class="head-left">
-      <div class="head-thumb-spacer"></div>
-      <span>Polling Unit</span>
+  <!-- Live feed -->
+  <div class="feed">
+    <div class="feed-header">
+      <div class="section-title">Live Verification Feed</div>
+      <div class="feed-count" id="feed-count"></div>
     </div>
-    <div class="cols">
-      <span><img src="/static/logo-lp.jpg" class="party-logo-sm" alt="">LP</span>
-      <span><img src="/static/logo-apc.jpg" class="party-logo-sm" alt="">APC</span>
-      <span>Quality</span>
+    <div class="feed-table-head">
+      <div class="head-left">
+        <div class="head-thumb-spacer"></div>
+        <span>Polling Unit</span>
+      </div>
+      <div class="cols">
+        <span><img src="/static/logo-lp.jpg" class="party-logo-sm" alt="">LP</span>
+        <span><img src="/static/logo-apc.jpg" class="party-logo-sm" alt="">APC</span>
+        <span>Quality</span>
+      </div>
+    </div>
+    <div id="feed-list">
+      <div class="feed-empty">Audience members scan the QR code and photograph their EC8A form — results appear here.</div>
     </div>
   </div>
-  <div id="feed-list">
-    <div class="feed-empty">Waiting for submissions — audience members scan the QR code and photograph their form.</div>
-  </div>
-</div>
+
+</div><!-- /#view-demo -->
 
 <!-- ── Lightbox ── -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
   <div class="lightbox-inner">
     <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
     <img class="lightbox-img" id="lightbox-img" src="" alt="EC8A Form">
-    <div class="lightbox-meta" id="lightbox-meta" style="margin-top:10px"></div>
+    <div class="lightbox-meta" id="lightbox-meta"></div>
   </div>
 </div>
 
 <div class="footer">
-  ADC 2026 Hackathon &nbsp;·&nbsp; Track 3: Checks, Accountability & Judicial Independence &nbsp;·&nbsp; Team 16 &nbsp;·&nbsp; E Don Kast / StayGIS
+  ADC 2026 Hackathon &nbsp;·&nbsp; Track 3: Checks, Accountability &amp; Judicial Independence &nbsp;·&nbsp; Team 16 &nbsp;·&nbsp; E Don Kast / StayGIS
 </div>
+
 </div><!-- /.page-wrap -->
 
 <script>
-  const fmt = n => Number(n).toLocaleString();
-  let knownIds  = new Set();
-  let failCount = 0;
+  const fmt  = n => Number(n).toLocaleString();
+  const fmtD = n => (n > 0 ? '+' : '') + Number(n).toLocaleString();
+
+  let knownIds   = new Set();
+  let failCount  = 0;
+  let scannedLP  = 0;
+  let scannedAPC = 0;
   const connBadge = document.getElementById('conn-badge');
 
+  // ── View toggle ──
+  function showView(v) {
+    document.getElementById('view-finding').style.display = v === 'finding' ? 'block' : 'none';
+    document.getElementById('view-demo').style.display    = v === 'demo'    ? 'block' : 'none';
+    document.getElementById('btn-finding').classList.toggle('active', v === 'finding');
+    document.getElementById('btn-demo').classList.toggle('active',    v === 'demo');
+  }
+
+  // ── Dynamic discrepancy ──
+  function updateDiscrepancy() {
+    const lpVal  = document.getElementById('inec-lp').value  === '' ? null : parseInt(document.getElementById('inec-lp').value,  10);
+    const apcVal = document.getElementById('inec-apc').value === '' ? null : parseInt(document.getElementById('inec-apc').value, 10);
+
+    document.getElementById('field-lp').classList.toggle('lp-active',  lpVal  !== null);
+    document.getElementById('field-apc').classList.toggle('apc-active', apcVal !== null);
+
+    if (lpVal === null || apcVal === null) {
+      document.getElementById('disc-box').classList.remove('visible');
+      return;
+    }
+
+    // LP: EC8A shows more than INEC declared → votes stripped from LP
+    // APC: INEC declared more than EC8A shows → votes added to APC
+    const lpDiff  = scannedLP  - lpVal;
+    const apcDiff = apcVal     - scannedAPC;
+
+    document.getElementById('disc-lp').textContent  = fmtD(-Math.abs(lpDiff));
+    document.getElementById('disc-apc').textContent = fmtD( Math.abs(apcDiff));
+    document.getElementById('disc-note').textContent =
+      `EC8A scanned: LP ${fmt(scannedLP)} · APC ${fmt(scannedAPC)}   —   INEC declared: LP ${fmt(lpVal)} · APC ${fmt(apcVal)}`;
+
+    document.getElementById('disc-box').classList.add('visible');
+  }
+
+  function clearINEC() {
+    document.getElementById('inec-lp').value  = '';
+    document.getElementById('inec-apc').value = '';
+    document.getElementById('field-lp').classList.remove('lp-active');
+    document.getElementById('field-apc').classList.remove('apc-active');
+    document.getElementById('disc-box').classList.remove('visible');
+  }
+
+  // ── Poll ──
   async function poll() {
     try {
       const res  = await fetch('/results');
       const data = await res.json();
 
-      // Connection restored
-      if (failCount > 0) {
-        failCount = 0;
-        connBadge.classList.remove('visible');
-      }
+      if (failCount > 0) { failCount = 0; connBadge.classList.remove('visible'); }
 
       const { results, count, totals, ground_truth: gt } = data;
 
-      // Counters
+      scannedLP  = totals.lp  || 0;
+      scannedAPC = totals.apc || 0;
+
       document.getElementById('count').textContent     = count;
-      document.getElementById('lp-total').textContent  = fmt(totals.lp);
-      document.getElementById('apc-total').textContent = fmt(totals.apc);
+      document.getElementById('lp-total').textContent  = fmt(scannedLP);
+      document.getElementById('apc-total').textContent = fmt(scannedAPC);
 
-      // Comparison row (static ground truth from server)
-      document.getElementById('ec8a-lp').textContent  = fmt(gt.ec8a_lga.lp);
-      document.getElementById('ec8a-apc').textContent = fmt(gt.ec8a_lga.apc);
+      // Keep Finding tab ground truth in sync
+      if (gt) {
+        document.getElementById('ec8a-lp').textContent  = fmt(gt.ec8a_lga.lp);
+        document.getElementById('ec8a-apc').textContent = fmt(gt.ec8a_lga.apc);
+      }
 
-      // Feed — prepend new items
+      // Recalculate dynamic discrepancy if INEC numbers already entered
+      if (document.getElementById('inec-lp').value !== '') updateDiscrepancy();
+
       const newResults = results.filter(r => !knownIds.has(r.id));
       if (newResults.length > 0) {
-        const list = document.getElementById('feed-list');
-
-        // Clear empty state
+        const list  = document.getElementById('feed-list');
         const empty = list.querySelector('.feed-empty');
         if (empty) empty.remove();
 
+        function cleanFlags(str) {
+          return str
+            .replace(/number_of_/gi, '').replace(/_/g, ' ')
+            .split(',').map(s => s.trim()).filter(Boolean)
+            .map(s => s.charAt(0).toUpperCase() + s.slice(1))
+            .map(s => s.replace(/\bPu\b/g,'PU').replace(/\bLga\b/g,'LGA').replace(/\bInec\b/g,'INEC'))
+            .join(' · ');
+        }
+
         newResults.reverse().forEach(r => {
           knownIds.add(r.id);
-          const qualityClass =
-            r.quality === 'good' ? 'quality-good' :
-            r.quality === 'poor' ? 'quality-poor' : 'quality-bad';
-
+          const qualityClass = r.quality === 'good' ? 'quality-good' : r.quality === 'poor' ? 'quality-poor' : 'quality-bad';
           const puLabel = r.polling_unit || r.pu_code || 'Unknown PU';
-
-          // Thumbnails served via /thumb/<id> — browser caches after first load
           const thumbHtml = r.has_media
-            ? `<img class="feed-thumb" src="/thumb/${r.id}" alt="Form thumbnail"
-                 loading="lazy"
-                 onclick="openLightbox('/preview/${r.id}','${puLabel.replace(/'/g,"\\'")}')">`
+            ? `<img class="feed-thumb" src="/thumb/${r.id}" alt="Form thumbnail" loading="lazy" onclick="openLightbox('/preview/${r.id}','${puLabel.replace(/'/g,"\\'")}')">`
             : `<div class="feed-thumb-placeholder"></div>`;
 
-          // Clean up any raw JSON field names that slip through from Claude
-          function cleanFlags(str) {
-            return str
-              .replace(/number_of_/gi, '')
-              .replace(/_/g, ' ')
-              .split(',')
-              .map(s => s.trim())
-              .filter(Boolean)
-              .map(s => s.charAt(0).toUpperCase() + s.slice(1))
-              .map(s => s.replace(/\bPu\b/g, 'PU').replace(/\bLga\b/g, 'LGA').replace(/\bInec\b/g, 'INEC'))
-              .join(' · ');
-          }
-
-          // Secondary party figures (PDP, NNPP) + flags + duplicate badge
           const secParts = [];
           if (r.duplicate) secParts.push(`<span class="feed-dupe">POSSIBLE DUPLICATE</span>`);
           if (r.pdp  != null) secParts.push(`<span class="feed-pdp"><img src="/static/logo-pdp.jpg" class="party-logo-sm" alt="">PDP&nbsp;${r.pdp}</span>`);
           if (r.nnpp != null) secParts.push(`<span class="feed-nnpp"><img src="/static/logo-nnpp.jpg" class="party-logo-sm" alt="">NNPP&nbsp;${r.nnpp}</span>`);
-          if (r.flags)        secParts.push(`<span class="feed-flags">${cleanFlags(r.flags)}</span>`);
-          const secHtml = secParts.length
-            ? `<div class="feed-secondary">${secParts.join('')}</div>`
-            : '';
+          if (r.flags) secParts.push(`<span class="feed-flags">${cleanFlags(r.flags)}</span>`);
+          const secHtml = secParts.length ? `<div class="feed-secondary">${secParts.join('')}</div>` : '';
 
           const div = document.createElement('div');
           div.className = 'feed-item';
           div.innerHTML = `
             <div class="feed-left">
               ${thumbHtml}
-              <div>
-                <div class="feed-pu">${puLabel}</div>
-                ${secHtml}
-              </div>
+              <div><div class="feed-pu">${puLabel}</div>${secHtml}</div>
             </div>
             <div class="feed-cols">
               <span class="feed-lp">${r.lp ?? '—'}</span>
@@ -603,41 +597,39 @@
       if (failCount >= 2) connBadge.classList.add('visible');
       console.error('Poll failed:', e);
     }
-
     setTimeout(poll, 2000);
   }
 
+  // ── Reset ──
   async function resetDemo() {
     if (!confirm('Clear all demo results?')) return;
     await fetch('/reset', { method: 'POST' });
-    knownIds  = new Set();
-    failCount = 0;
+    knownIds = new Set(); failCount = 0; scannedLP = 0; scannedAPC = 0;
     connBadge.classList.remove('visible');
-    document.getElementById('count').textContent     = '0';
-    document.getElementById('lp-total').textContent  = '0';
-    document.getElementById('apc-total').textContent = '0';
+    document.getElementById('count').textContent      = '0';
+    document.getElementById('lp-total').textContent   = '0';
+    document.getElementById('apc-total').textContent  = '0';
     document.getElementById('feed-count').textContent = '';
-    document.getElementById('feed-list').innerHTML =
-      '<div class="feed-empty">Waiting for submissions…</div>';
+    document.getElementById('feed-list').innerHTML    = '<div class="feed-empty">Waiting for submissions…</div>';
+    clearINEC();
   }
 
-  poll();
-
+  // ── Lightbox ──
   function openLightbox(src, label) {
     document.getElementById('lightbox-img').src = src;
     document.getElementById('lightbox-meta').textContent = label || '';
     document.getElementById('lightbox').classList.add('open');
   }
-
   function closeLightbox(e) {
     if (e && e.target !== document.getElementById('lightbox')) return;
     document.getElementById('lightbox').classList.remove('open');
     document.getElementById('lightbox-img').src = '';
   }
-
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
   });
+
+  poll();
 </script>
 </body>
 </html>
