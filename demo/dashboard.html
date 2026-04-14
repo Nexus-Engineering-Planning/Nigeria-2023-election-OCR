@@ -265,6 +265,11 @@
     background:rgba(251,191,36,.1); border:1px solid rgba(251,191,36,.3);
     border-radius:4px; padding:1px 6px;
   }
+  .feed-conflict {
+    font-size:10px; font-weight:700; letter-spacing:.05em; color:#f87171;
+    background:rgba(248,113,113,.1); border:1px solid rgba(248,113,113,.3);
+    border-radius:4px; padding:1px 6px;
+  }
 
   /* ── Lightbox ── */
   .lightbox {
@@ -469,11 +474,27 @@
   const fmt  = n => Number(n).toLocaleString();
   const fmtD = n => (n > 0 ? '+' : '') + Number(n).toLocaleString();
 
+  function escHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   let knownIds   = new Set();
   let failCount  = 0;
+  let pollDelay  = 2000;
   let scannedLP  = 0;
   let scannedAPC = 0;
   const connBadge = document.getElementById('conn-badge');
+
+  // Delegated click handler for feed thumbnails — avoids inline onclick with user data
+  document.getElementById('feed-list').addEventListener('click', function(e) {
+    const thumb = e.target.closest('.feed-thumb');
+    if (thumb) openLightbox(thumb.dataset.preview, thumb.dataset.label);
+  });
 
   // ── View toggle ──
   function showView(v) {
@@ -524,7 +545,7 @@
       const res  = await fetch('/results');
       const data = await res.json();
 
-      if (failCount > 0) { failCount = 0; connBadge.classList.remove('visible'); }
+      if (failCount > 0) { failCount = 0; pollDelay = 2000; connBadge.classList.remove('visible'); }
 
       const { results, count, totals, ground_truth: gt } = data;
 
@@ -556,6 +577,7 @@
             .split(',').map(s => s.trim()).filter(Boolean)
             .map(s => s.charAt(0).toUpperCase() + s.slice(1))
             .map(s => s.replace(/\bPu\b/g,'PU').replace(/\bLga\b/g,'LGA').replace(/\bInec\b/g,'INEC'))
+            .map(s => escHtml(s))
             .join(' · ');
         }
 
@@ -563,14 +585,22 @@
           knownIds.add(r.id);
           const qualityClass = r.quality === 'good' ? 'quality-good' : r.quality === 'poor' ? 'quality-poor' : 'quality-bad';
           const puLabel = r.polling_unit || r.pu_code || 'Unknown PU';
+          // Use data attributes instead of inline onclick to avoid XSS via puLabel
           const thumbHtml = r.has_media
-            ? `<img class="feed-thumb" src="/thumb/${r.id}" alt="Form thumbnail" loading="lazy" onclick="openLightbox('/preview/${r.id}','${puLabel.replace(/'/g,"\\'")}')">`
+            ? `<img class="feed-thumb" src="/thumb/${escHtml(r.id)}" alt="Form thumbnail" loading="lazy" data-preview="/preview/${escHtml(r.id)}" data-label="${escHtml(puLabel)}">`
             : `<div class="feed-thumb-placeholder"></div>`;
 
           const secParts = [];
           if (r.duplicate) secParts.push(`<span class="feed-dupe">POSSIBLE DUPLICATE</span>`);
-          if (r.pdp  != null) secParts.push(`<span class="feed-pdp"><img src="/static/logo-pdp.jpg" class="party-logo-sm" alt="">PDP&nbsp;${r.pdp}</span>`);
-          if (r.nnpp != null) secParts.push(`<span class="feed-nnpp"><img src="/static/logo-nnpp.jpg" class="party-logo-sm" alt="">NNPP&nbsp;${r.nnpp}</span>`);
+          if (r.lp_mismatch || r.apc_mismatch) {
+            const which = [r.lp_mismatch && 'LP', r.apc_mismatch && 'APC'].filter(Boolean).join('/');
+            secParts.push(`<span class="feed-conflict">${escHtml(which)} CONFLICT</span>`);
+          }
+          if (r.sum_delta != null && r.sum_delta > 2) {
+            secParts.push(`<span class="feed-conflict">SUM OFF BY ${Number(r.sum_delta)}</span>`);
+          }
+          if (r.pdp  != null) secParts.push(`<span class="feed-pdp"><img src="/static/logo-pdp.jpg" class="party-logo-sm" alt="">PDP&nbsp;${Number(r.pdp)}</span>`);
+          if (r.nnpp != null) secParts.push(`<span class="feed-nnpp"><img src="/static/logo-nnpp.jpg" class="party-logo-sm" alt="">NNPP&nbsp;${Number(r.nnpp)}</span>`);
           if (r.flags) secParts.push(`<span class="feed-flags">${cleanFlags(r.flags)}</span>`);
           const secHtml = secParts.length ? `<div class="feed-secondary">${secParts.join('')}</div>` : '';
 
@@ -579,12 +609,12 @@
           div.innerHTML = `
             <div class="feed-left">
               ${thumbHtml}
-              <div><div class="feed-pu">${puLabel}</div>${secHtml}</div>
+              <div><div class="feed-pu">${escHtml(puLabel)}</div>${secHtml}</div>
             </div>
             <div class="feed-cols">
               <span class="feed-lp">${r.lp ?? '—'}</span>
               <span class="feed-apc">${r.apc ?? '—'}</span>
-              <span class="${qualityClass}">${r.quality}</span>
+              <span class="${qualityClass}">${escHtml(r.quality)}</span>
             </div>`;
           list.prepend(div);
         });
@@ -595,17 +625,18 @@
 
     } catch(e) {
       failCount++;
+      pollDelay = Math.min(pollDelay * 2, 30000);
       if (failCount >= 2) connBadge.classList.add('visible');
       console.error('Poll failed:', e);
     }
-    setTimeout(poll, 2000);
+    setTimeout(poll, pollDelay);
   }
 
   // ── Reset ──
   async function resetDemo() {
     if (!confirm('Clear all demo results?')) return;
     await fetch('/reset', { method: 'POST' });
-    knownIds = new Set(); failCount = 0; scannedLP = 0; scannedAPC = 0;
+    knownIds = new Set(); failCount = 0; pollDelay = 2000; scannedLP = 0; scannedAPC = 0;
     connBadge.classList.remove('visible');
     document.getElementById('count').textContent      = '0';
     document.getElementById('lp-total').textContent   = '0';
