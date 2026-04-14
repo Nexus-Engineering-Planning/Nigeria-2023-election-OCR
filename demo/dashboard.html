@@ -36,6 +36,10 @@
     min-height: 100vh;
     padding: 28px 32px;
   }
+  .page-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
   /* ── Header ── */
   header {
@@ -86,7 +90,7 @@
   /* ── Counter grid ── */
   .counters {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 16px;
     margin-bottom: 20px;
   }
@@ -109,6 +113,34 @@
     letter-spacing: .1em;
     font-weight: 600;
   }
+  .count-with-us {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px;
+  }
+  .count-with-us-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--teal);
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  .count-with-us-sub {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--slate);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .count-with-us-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .count-with-us-row .counter-num { font-size: 54px; }
+  .count-with-us-item { text-align: center; }
   .teal    { color: var(--teal); }     /* UI brand only */
   .orange  { color: var(--orange); }   /* UI brand only */
   .lp-num  { color: var(--lp);   }
@@ -144,26 +176,23 @@
   .party-logo-sm { width: 18px; height: 18px; object-fit: contain; border-radius: 3px; flex-shrink: 0; vertical-align: middle; margin-right: 4px; }
   .comp-val .val-num { font-size: 26px; font-weight: 800; }
 
-  /* ── Discrepancy box ── */
+  /* ── Discrepancy (now inside comparison card) ── */
   .discrepancy {
+    border-top: 2px solid var(--red-border);
     background: var(--red-bg);
-    border: 2px solid var(--red-border);
-    border-radius: 18px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
-    display: none;
+    margin: 16px -24px -22px;
+    padding: 18px 24px 20px;
+    border-radius: 0 0 18px 18px;
   }
-  .discrepancy.visible { display: block; }
   .disc-title {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--red);
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
   .disc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .disc-item .disc-label { font-size: 11px; color: rgba(248,113,113,.6); margin-bottom: 4px; text-transform: uppercase; letter-spacing: .07em; }
   .disc-item .disc-val { font-size: 28px; font-weight: 900; color: #fca5a5; }
-  .disc-source { font-size: 11px; color: rgba(248,113,113,.4); margin-top: 12px; }
 
   /* ── Submissions feed ── */
   .feed {
@@ -198,6 +227,15 @@
     width: 48px; flex-shrink: 0;
   }
   .feed-table-head .cols { display: flex; gap: 44px; }
+
+  #feed-list {
+    max-height: 420px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  #feed-list::-webkit-scrollbar { width: 4px; }
+  #feed-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
   .feed-empty {
     text-align: center;
@@ -341,13 +379,14 @@
 </head>
 <body>
 
+<div class="page-wrap">
 <!-- ── Header ── -->
 <header>
   <div class="logo-area">
     <img src="/static/edk-logo.svg" alt="E Don Kast" onerror="this.style.display='none'">
     <div>
       <div class="logo-text">E Don Kast</div>
-      <div class="ward-info" id="ward-info">Ward 4 · Obio-Akpor · Rivers State · Live Demo</div>
+      <div class="ward-info" id="ward-info">Obio-Akpor LGA · Rivers State · Live Demo</div>
     </div>
   </div>
   <div style="display:flex;align-items:center">
@@ -363,22 +402,31 @@
 <!-- ── Counters ── -->
 <div class="counters">
   <div class="counter-card">
-    <div class="counter-num" id="count">0</div>
+    <div class="counter-num teal" id="count">0</div>
     <div class="counter-label">Forms Submitted</div>
   </div>
-  <div class="counter-card">
-    <div class="counter-num lp-num" id="lp-total">0</div>
-    <div class="counter-label">LP Votes (EC8A)</div>
-  </div>
-  <div class="counter-card">
-    <div class="counter-num apc-num" id="apc-total">0</div>
-    <div class="counter-label">APC Votes (EC8A)</div>
+  <div class="count-with-us">
+    <div class="count-with-us-title">Count With Us</div>
+    <div class="count-with-us-sub">Scanned with our ADC audience</div>
+    <div class="count-with-us-row">
+      <div class="count-with-us-item">
+        <div class="counter-num lp-num" id="lp-total">0</div>
+        <div class="counter-label">LP Votes</div>
+      </div>
+      <div class="count-with-us-item">
+        <div class="counter-num apc-num" id="apc-total">0</div>
+        <div class="counter-label">APC Votes</div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- ── Comparison ── -->
+<!-- ── Comparison + Discrepancy ── -->
 <div class="comparison">
-  <div class="section-title">EC8A Forms vs. INEC Declared — Obio-Akpor LGA</div>
+  <div class="section-title">The Known Finding — Obio-Akpor LGA Presidential Result</div>
+  <div style="font-size:12px; color:var(--slate); margin-bottom:14px;">
+    Source: CCIJ / Veza News — 169,000+ EC8A polling unit forms digitized nationally
+  </div>
   <div class="comp-row header-row">
     <span></span>
     <div class="comp-vals">
@@ -387,7 +435,7 @@
     </div>
   </div>
   <div class="comp-row">
-    <div class="comp-label">EC8A Forms — CCIJ / Veza News dataset (169k forms)</div>
+    <div class="comp-label">EC8A Forms (what polling unit sheets show)</div>
     <div class="comp-vals">
       <div class="comp-val"><div class="val-num lp-num" id="ec8a-lp">68,521</div></div>
       <div class="comp-val"><div class="val-num apc-num" id="ec8a-apc">16,980</div></div>
@@ -400,30 +448,27 @@
       <div class="comp-val"><div class="val-num apc-num">80,239</div></div>
     </div>
   </div>
-</div>
 
-<!-- ── Discrepancy ── -->
-<div class="discrepancy" id="disc-box">
-  <div class="disc-title">⚠ Discrepancy Detected</div>
-  <div class="disc-grid">
-    <div class="disc-item">
-      <div class="disc-label">LP votes unaccounted for</div>
-      <div class="disc-val">−64,692</div>
+  <!-- Discrepancy summary — flush bottom of card -->
+  <div class="discrepancy" id="disc-box">
+    <div class="disc-title">⚠ Discrepancy Detected</div>
+    <div class="disc-grid">
+      <div class="disc-item">
+        <div class="disc-label">LP votes unaccounted for</div>
+        <div class="disc-val">−64,692</div>
+      </div>
+      <div class="disc-item">
+        <div class="disc-label">APC votes with no EC8A record</div>
+        <div class="disc-val">+63,259</div>
+      </div>
     </div>
-    <div class="disc-item">
-      <div class="disc-label">APC votes not on EC8A forms</div>
-      <div class="disc-val">+63,259</div>
-    </div>
-  </div>
-  <div class="disc-source">
-    Source: CCIJ / Veza News — 169,000+ EC8A forms vs. INEC official LGA declaration
   </div>
 </div>
 
 <!-- ── Feed ── -->
 <div class="feed">
   <div class="feed-header">
-    <div class="section-title" style="margin:0">Incoming Submissions</div>
+    <div class="section-title" style="margin:0">Live Verification Feed</div>
     <div class="feed-count" id="feed-count"></div>
   </div>
   <div class="feed-table-head">
@@ -454,11 +499,11 @@
 <div class="footer">
   ADC 2026 Hackathon &nbsp;·&nbsp; Track 3: Checks, Accountability & Judicial Independence &nbsp;·&nbsp; Team 16 &nbsp;·&nbsp; E Don Kast / StayGIS
 </div>
+</div><!-- /.page-wrap -->
 
 <script>
   const fmt = n => Number(n).toLocaleString();
   let knownIds  = new Set();
-  let discShown = false;
   let failCount = 0;
   const connBadge = document.getElementById('conn-badge');
 
@@ -483,12 +528,6 @@
       // Comparison row (static ground truth from server)
       document.getElementById('ec8a-lp').textContent  = fmt(gt.ec8a_lga.lp);
       document.getElementById('ec8a-apc').textContent = fmt(gt.ec8a_lga.apc);
-
-      // Discrepancy — show after 3 submissions
-      if (count >= 3 && !discShown) {
-        document.getElementById('disc-box').classList.add('visible');
-        discShown = true;
-      }
 
       // Feed — prepend new items
       const newResults = results.filter(r => !knownIds.has(r.id));
@@ -572,13 +611,11 @@
     if (!confirm('Clear all demo results?')) return;
     await fetch('/reset', { method: 'POST' });
     knownIds  = new Set();
-    discShown = false;
     failCount = 0;
     connBadge.classList.remove('visible');
     document.getElementById('count').textContent     = '0';
     document.getElementById('lp-total').textContent  = '0';
     document.getElementById('apc-total').textContent = '0';
-    document.getElementById('disc-box').classList.remove('visible');
     document.getElementById('feed-count').textContent = '';
     document.getElementById('feed-list').innerHTML =
       '<div class="feed-empty">Waiting for submissions…</div>';

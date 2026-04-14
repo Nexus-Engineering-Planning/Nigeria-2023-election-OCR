@@ -39,6 +39,9 @@
   .logo-text { font-size: 24px; font-weight: 800; color: var(--teal); }
   .subtitle { color: var(--slate); font-size: 13px; }
 
+  /* ── Camera label ── */
+  label.btn-primary { display: flex; }   /* match button default */
+
   /* ── Card ── */
   .card {
     background: var(--card);
@@ -168,9 +171,9 @@
     <input type="file" id="file-input" accept="image/*" capture="environment">
     <img id="preview" alt="Form preview">
 
-    <button class="btn-primary" id="camera-btn" onclick="document.getElementById('file-input').click()">
+    <label class="btn-primary" id="camera-btn" for="file-input">
       Take Photo / Upload
-    </button>
+    </label>
     <button class="btn-primary btn-blue" id="submit-btn" style="display:none; margin-top:10px" onclick="submitForm()">
       ✓ Submit Form
     </button>
