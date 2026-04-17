@@ -7,7 +7,7 @@ duration of the demo session.
 Routes:
   GET  /              → mobile upload page (audience scans QR, photographs EC8A form)
   GET  /dashboard     → live dashboard (projected on screen)
-  POST /submit        → receives image → Claude Vision → stores result → returns JSON
+  POST /submit        → receives image → AI → stores result → returns JSON
   GET  /results       → JSON of all results so far (no base64 blobs)
   GET  /thumb/<id>    → 80px JPEG thumbnail for a submitted form
   GET  /preview/<id>  → 600px JPEG preview for a submitted form (lightbox)
@@ -449,8 +449,8 @@ def results():
     with _lock:
         data = list(_results)
 
-    lp_total  = sum(r["lp"]  or 0 for r in data)
-    apc_total = sum(r["apc"] or 0 for r in data)
+    lp_total  = sum(r["lp"]  or 0 for r in data if not r.get("duplicate"))
+    apc_total = sum(r["apc"] or 0 for r in data if not r.get("duplicate"))
 
     return jsonify({
         "results":      data,
