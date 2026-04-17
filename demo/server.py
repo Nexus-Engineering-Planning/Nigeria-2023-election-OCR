@@ -280,7 +280,7 @@ def extract_with_claude(image_bytes: bytes) -> dict:
     img_b64 = image_to_base64_jpeg(image_bytes)
 
     message = client.messages.create(
-        model="claude-haiku-4-5-20251001",
+        model="claude-sonnet-4-6",
         max_tokens=1024,
         messages=[{
             "role": "user",
