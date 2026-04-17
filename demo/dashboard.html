@@ -358,12 +358,12 @@
       <div class="disc-title">⚠ Discrepancy Detected</div>
       <div class="disc-grid">
         <div>
-          <div class="disc-label">Fewer LP votes than INEC reported</div>
-          <div class="disc-val">−64,692</div>
+          <div class="disc-label">EC8A shows more LP votes than INEC declared</div>
+          <div class="disc-val">+64,692</div>
         </div>
         <div>
-          <div class="disc-label">More APC votes than INEC reported</div>
-          <div class="disc-val">+63,259</div>
+          <div class="disc-label">EC8A shows fewer APC votes than INEC declared</div>
+          <div class="disc-val">−63,259</div>
         </div>
       </div>
     </div>
@@ -420,11 +420,11 @@
     <div class="disc-title">⚠ Discrepancy Detected</div>
     <div class="disc-grid">
       <div>
-        <div class="disc-label">Fewer LP votes than INEC reported</div>
+        <div class="disc-label" id="disc-label-lp">—</div>
         <div class="disc-val" id="disc-lp">—</div>
       </div>
       <div>
-        <div class="disc-label">More APC votes than INEC reported</div>
+        <div class="disc-label" id="disc-label-apc">—</div>
         <div class="disc-val" id="disc-apc">—</div>
       </div>
     </div>
@@ -518,13 +518,28 @@
       return;
     }
 
-    // LP: EC8A shows more than INEC declared → votes stripped from LP
-    // APC: INEC declared more than EC8A shows → votes added to APC
+    // Positive = EC8A recorded MORE than INEC declared; negative = EC8A recorded FEWER
     const lpDiff  = scannedLP  - lpVal;
-    const apcDiff = apcVal     - scannedAPC;
+    const apcDiff = scannedAPC - apcVal;
 
-    document.getElementById('disc-lp').textContent  = fmtD(-Math.abs(lpDiff));
-    document.getElementById('disc-apc').textContent = fmtD( Math.abs(apcDiff));
+    // Threshold below which we consider the values to match (within 50 votes)
+    const MATCH_THRESHOLD = 50;
+
+    function discLabel(party, diff) {
+      if (Math.abs(diff) <= MATCH_THRESHOLD) return `${party} votes match INEC's declared total`;
+      if (diff > 0) return `EC8A shows more ${party} votes than INEC declared`;
+      return `EC8A shows fewer ${party} votes than INEC declared`;
+    }
+
+    function discVal(diff) {
+      if (Math.abs(diff) <= MATCH_THRESHOLD) return '≈ 0';
+      return fmtD(diff);
+    }
+
+    document.getElementById('disc-label-lp').textContent  = discLabel('LP',  lpDiff);
+    document.getElementById('disc-label-apc').textContent = discLabel('APC', apcDiff);
+    document.getElementById('disc-lp').textContent        = discVal(lpDiff);
+    document.getElementById('disc-apc').textContent       = discVal(apcDiff);
     document.getElementById('disc-note').textContent =
       `EC8A scanned: LP ${fmt(scannedLP)} · APC ${fmt(scannedAPC)}   —   INEC declared: LP ${fmt(lpVal)} · APC ${fmt(apcVal)}`;
 
