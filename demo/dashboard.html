@@ -522,17 +522,14 @@
     const lpDiff  = scannedLP  - lpVal;
     const apcDiff = scannedAPC - apcVal;
 
-    // Threshold below which we consider the values to match (within 50 votes)
-    const MATCH_THRESHOLD = 50;
-
     function discLabel(party, diff) {
-      if (Math.abs(diff) <= MATCH_THRESHOLD) return `${party} votes match INEC's declared total`;
+      if (diff === 0) return `${party} votes match INEC's declared total`;
       if (diff > 0) return `EC8A shows more ${party} votes than INEC declared`;
       return `EC8A shows fewer ${party} votes than INEC declared`;
     }
 
     function discVal(diff) {
-      if (Math.abs(diff) <= MATCH_THRESHOLD) return '≈ 0';
+      if (diff === 0) return '0';
       return fmtD(diff);
     }
 
