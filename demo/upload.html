@@ -166,7 +166,7 @@
   <!-- Upload state -->
   <div id="upload-state">
     <h2>Photograph your EC8A form</h2>
-    <p class="hint">Hold steady — make sure all text is visible</p>
+    <p class="hint">Get close. The form should fill the screen edge to edge — it's okay if the white border around it is cut off. Hold steady, avoid glare, and make sure all text is visible.</p>
 
     <input type="file" id="file-input" accept="image/*" capture="environment">
     <img id="preview" alt="Form preview">
@@ -212,6 +212,12 @@
 </div>
 
 <script>
+  // Trap the back button — users arriving via QR code should retry here, not navigate away
+  history.pushState(null, '', window.location.href);
+  window.addEventListener('popstate', function() {
+    history.pushState(null, '', window.location.href);
+  });
+
   let selectedFile = null;
 
   const MAX_MB = 15;
@@ -267,7 +273,7 @@
     const form = new FormData();
     form.append('image', selectedFile);
 
-    // 45-second timeout — Haiku is fast but give some slack for slow connections
+    // 45-second timeout — Sonnet is performant but allow slack for slow connections
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 45000);
 
@@ -280,7 +286,7 @@
         statusEl.className   = 'status error';
         // Show user-friendly messages — never expose raw server/API details
         const msg = data.error.toLowerCase();
-        statusEl.textContent =
+        const errMsg =
           msg.includes('too small') || msg.includes('empty')
             ? 'Image looks blank — please retake the photo.'
             : msg.includes('too large') || msg.includes('15 mb')
@@ -288,6 +294,7 @@
             : msg.includes('parse') || msg.includes('json')
             ? 'Could not read the form — try a clearer photo.'
             : 'Verification failed — please retake and try again.';
+        statusEl.textContent = errMsg;
         submitBtn.disabled = false;
         return;
       }
@@ -305,11 +312,12 @@
 
     } catch(err) {
       clearTimeout(timer);
-      statusEl.className   = 'status error';
-      statusEl.textContent = err.name === 'AbortError'
+      statusEl.className  = 'status error';
+      const connMsg = err.name === 'AbortError'
         ? 'Taking too long — please try again.'
         : 'Connection error — please try again.';
-      submitBtn.disabled   = false;
+      statusEl.textContent = connMsg;
+      submitBtn.disabled = false;
     }
   }
 
