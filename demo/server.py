@@ -1,8 +1,9 @@
 """
 demo/server.py — E Don Kast ADC 2026 Hackathon Demo Server
 
-Self-contained Flask app. No database — results live in memory for the
-duration of the demo session.
+Self-contained Flask app. Results are persisted to results.json so a server
+restart does not lose submissions. Thumbnails/media are still in-memory only
+(they show as placeholders after a restart, but vote counts survive).
 
 Routes:
   GET  /              → mobile upload page (audience scans QR, photographs EC8A form)
@@ -65,10 +66,42 @@ GROUND_TRUTH = {
     "inec_declared":  {"lp": 3829,  "apc": 80239},   # INEC officially declared (LGA)
 }
 
+# ── Persistence ──────────────────────────────────────────────────────────────
+# Results are written to this file after every submission and reset so that a
+# server restart doesn't wipe the board mid-demo.  Media (thumbnails) are still
+# in-memory only — restored records show as placeholders after a restart.
+_RESULTS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results.json")
+
+
+def _load_results() -> list:
+    """Read persisted results from disk.  Returns [] if file is absent or corrupt."""
+    if not os.path.exists(_RESULTS_FILE):
+        return []
+    try:
+        with open(_RESULTS_FILE, "r", encoding="utf-8") as fh:
+            data = json.load(fh)
+        # has_media cannot survive a restart — thumbnails are in-memory only
+        restored = [dict(r, has_media=False) for r in data]
+        logger.info("Loaded %d persisted results from %s", len(restored), _RESULTS_FILE)
+        return restored
+    except Exception:
+        logger.exception("Failed to load persisted results — starting fresh")
+        return []
+
+
+def _save_results(results: list) -> None:
+    """Write the current results list to disk.  Call while holding _lock."""
+    try:
+        with open(_RESULTS_FILE, "w", encoding="utf-8") as fh:
+            json.dump(results, fh)
+    except Exception:
+        logger.exception("Failed to save results to disk")
+
+
 # ── In-memory stores ──────────────────────────────────────────────────────────
 _lock    = threading.Lock()
-_results = []          # list of result dicts — NO base64 blobs here
-_media   = {}          # id → {"thumb": bytes, "preview": bytes}
+_results = _load_results()  # list of result dicts — NO base64 blobs here
+_media   = {}               # id → {"thumb": bytes, "preview": bytes}
 
 # ── Per-IP rate limiting ──────────────────────────────────────────────────────
 _rate_limit: dict[str, float] = {}
@@ -409,6 +442,7 @@ def submit():
 
     with _lock:
         _results.append(record)
+        _save_results(_results)          # persist so a restart doesn't lose this submission
         if thumb_bytes and preview_bytes:
             _media[record_id] = {
                 "thumb":   thumb_bytes,
@@ -465,6 +499,7 @@ def reset():
     with _lock:
         _results.clear()
         _media.clear()
+        _save_results(_results)   # overwrite with empty list
     return jsonify({"ok": True})
 
 

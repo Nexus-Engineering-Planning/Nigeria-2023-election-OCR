@@ -134,8 +134,26 @@
 
   /* Counter cards */
   .counters {
-    display: grid; grid-template-columns: 1fr 2fr;
-    gap: 16px; margin-bottom: 16px;
+    display: grid; grid-template-columns: 1fr 2fr auto;
+    gap: 16px; margin-bottom: 16px; align-items: start;
+  }
+
+  /* QR code card */
+  .qr-card {
+    background: var(--card); border-radius: 18px;
+    padding: 20px 18px; text-align: center; flex-shrink: 0;
+  }
+  .qr-card-title {
+    font-size: 13px; font-weight: 700; color: var(--teal);
+    text-transform: uppercase; letter-spacing: .08em; margin-bottom: 12px;
+  }
+  .qr-wrap {
+    background: #fff; border-radius: 10px;
+    padding: 10px; display: inline-block; line-height: 0;
+  }
+  .qr-url {
+    font-size: 11px; color: var(--slate); margin-top: 10px;
+    word-break: break-all; max-width: 150px; margin-inline: auto;
   }
   .counter-card {
     background: var(--card); border-radius: 18px;
@@ -394,6 +412,11 @@
         </div>
       </div>
     </div>
+    <div class="qr-card">
+      <div class="qr-card-title">Scan to Submit</div>
+      <div class="qr-wrap"><div id="qr-code"></div></div>
+      <div class="qr-url" id="qr-url"></div>
+    </div>
   </div>
 
   <!-- INEC declaration inputs -->
@@ -470,9 +493,24 @@
 
 </div><!-- /.page-wrap -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
   const fmt  = n => Number(n).toLocaleString();
   const fmtD = n => (n > 0 ? '+' : '') + Number(n).toLocaleString();
+
+  // ── QR code — points to the upload page on this same server ──
+  (function() {
+    const uploadUrl = window.location.origin + '/';
+    new QRCode(document.getElementById('qr-code'), {
+      text:           uploadUrl,
+      width:          140,
+      height:         140,
+      colorDark:      '#000000',
+      colorLight:     '#ffffff',
+      correctLevel:   QRCode.CorrectLevel.M,
+    });
+    document.getElementById('qr-url').textContent = uploadUrl;
+  })();
 
   function escHtml(s) {
     return String(s)
