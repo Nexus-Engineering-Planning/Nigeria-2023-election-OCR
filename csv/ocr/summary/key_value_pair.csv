@@ -1,0 +1,66 @@
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+22,5,10,28,../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+22,5,10,16,../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+22,5,10,47,../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+22,5,10,10,../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+2,14,4,23,../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+2,14,4,14,../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+2,14,4,4,../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+2,14,4,24,../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+1,1,4,1,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+1,2,12,15,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_01/01_01_01_015_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+1,1,7,14,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+-1,-1,-1,-1,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_01/01_01_01_003_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+-1,-1,-1,-1,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_01/01_01_01_002_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+1,10,1000,21,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+1,10,10,19,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+-1,-1,-1,-1,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_04/ward_03/01_04_03_017_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+0,10,10,3,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+1,5,8,7,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+1,1,4,7,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+1,1,3,304,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+1,1,6,30,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+STATE CODE,LGA CODE,RA CODE,PU CODE,image_path
+1,1,3,10,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+22,5,10,28,../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+22,5,10,16,../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+22,5,10,47,../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+22,5,10,10,../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+2,14,4,23,../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+2,14,4,14,../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+2,14,4,4,../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+2,14,4,24,../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+1,1,4,1,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+1,2,12,15,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_01/01_01_01_015_unwrap.jpg
+1,1,7,14,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+-1,-1,-1,-1,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_01/01_01_01_003_unwrap.jpg
+-1,-1,-1,-1,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_01/01_01_01_002_unwrap.jpg
+1,10,1000,21,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+1,10,10,19,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+-1,-1,-1,-1,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_04/ward_03/01_04_03_017_unwrap.jpg
+0,10,10,3,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+1,5,8,7,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+1,1,4,7,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+1,1,3,304,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+1,1,6,30,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+1,1,3,10,../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg

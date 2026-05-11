@@ -1,0 +1,14 @@
+torch==1.11.0
+torchvision==0.12.0
+torchaudio==0.11.0
+ultralytics==8.2.22
+numpy
+pandas
+pillow
+opencv-python-headless
+tqdm
+shapely
+jupyterlab
+ipykernel
+fuzzywuzzy==0.18.0
+boto3==1.37.38
