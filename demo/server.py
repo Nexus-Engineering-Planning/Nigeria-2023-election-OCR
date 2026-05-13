@@ -28,6 +28,7 @@ import io
 import json
 import logging
 import os
+import sys
 import threading
 import time
 import uuid
@@ -35,6 +36,11 @@ from datetime import datetime, timezone
 
 from flask import Flask, Response, jsonify, request, send_from_directory
 from PIL import Image
+
+# ── Repo root on sys.path so scripts/dewarp.py is importable ─────────────────
+_REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _REPO_ROOT not in sys.path:
+    sys.path.insert(0, _REPO_ROOT)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -134,6 +140,58 @@ def get_anthropic_client() -> anthropic.Anthropic:
                     raise RuntimeError("ANTHROPIC_API_KEY environment variable is not set")
                 _anthropic_client = anthropic.Anthropic(api_key=api_key)
     return _anthropic_client
+
+
+# ── Dewarp models (singleton — loaded lazily on first submit) ─────────────────
+# NOT loaded at import time: model files are ~200 MB and take ~30 s to load.
+# Lazy loading means tests and admin scripts that import server.py don't stall.
+_dewarp_det_model = None
+_dewarp_rect_model = None
+_dewarp_available: bool | None = None  # None = not yet checked
+_dewarp_lock = threading.Lock()
+
+
+def _get_dewarp_models():
+    """Return (det_model, rect_model) or None if unavailable. Lazy singleton."""
+    global _dewarp_det_model, _dewarp_rect_model, _dewarp_available
+    if _dewarp_available is None:
+        with _dewarp_lock:
+            if _dewarp_available is None:
+                try:
+                    from scripts.dewarp import load_models
+                    logger.info("Loading dewarp models...")
+                    _dewarp_det_model, _dewarp_rect_model = load_models()
+                    _dewarp_available = True
+                    logger.info("Dewarp models loaded.")
+                except Exception as e:
+                    logger.warning("Dewarp unavailable (%s); server will run without dewarping.", e)
+                    _dewarp_available = False
+    if not _dewarp_available:
+        return None
+    return _dewarp_det_model, _dewarp_rect_model
+
+
+def _try_dewarp(image_bytes: bytes) -> tuple[bytes, bool]:
+    """Attempt to crop+dewarp raw upload bytes.
+
+    Returns (possibly_dewarped_bytes, dewarp_applied).
+    Never raises — on any failure returns the original bytes unchanged.
+    """
+    models = _get_dewarp_models()
+    if models is None:
+        return image_bytes, False
+    det_model, rect_model = models
+    try:
+        import cv2
+        import numpy as np
+        from scripts.dewarp import dewarp_to_bytes, DewarpError
+        img_pil = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+        bgr = cv2.cvtColor(np.array(img_pil), cv2.COLOR_RGB2BGR)
+        dewarped_bytes = dewarp_to_bytes(bgr, det_model, rect_model)
+        return dewarped_bytes, True
+    except Exception as e:
+        logger.warning("Dewarp failed (%s); using raw upload.", e)
+        return image_bytes, False
 
 
 # ── Claude extraction prompt ──────────────────────────────────────────────────
@@ -374,6 +432,13 @@ def submit():
     if len(image_bytes) < 500:
         return jsonify({"error": "Image too small or empty"}), 400
 
+    # Dewarp only when explicitly requested (opt-in; off by default)
+    server_dewarp = request.headers.get("x-server-dewarp", "false").lower() == "true"
+    if server_dewarp:
+        image_bytes, dewarp_applied = _try_dewarp(image_bytes)
+    else:
+        dewarp_applied = False
+
     # Generate thumbnails (single decode) before the slower Claude call
     try:
         thumb_bytes, preview_bytes = make_thumbnails(image_bytes)
@@ -422,10 +487,12 @@ def submit():
                 break
 
     record = {
-        "id":           record_id,
-        "timestamp":    datetime.now(timezone.utc).isoformat(),
-        "polling_unit": meta.get("polling_unit", ""),
-        "pu_code":      meta.get("pu_code", ""),
+        "id":             record_id,
+        "timestamp":      datetime.now(timezone.utc).isoformat(),
+        "image_source":   "crowdsource",
+        "dewarp_applied": dewarp_applied,
+        "polling_unit":   meta.get("polling_unit", ""),
+        "pu_code":        meta.get("pu_code", ""),
         "lp":           lp_val,
         "apc":          apc_val,
         "pdp":          pdp_val,

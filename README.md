@@ -15,12 +15,17 @@ pip install -r requirements.txt
 # Set your API key (Windows PowerShell)
 [System.Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "your_key_here", "User")
 
-# Run on a folder of images
-python ec8a_extract.py --input training_data/images --output results.csv
+# Run on a folder of images (dewarping off by default)
+python ec8a_extract.py --source-channel crowdsource --input training_data/images --output results.csv
 
 # Limit to N images for testing
-python ec8a_extract.py --input training_data/images --limit 10
+python ec8a_extract.py --source-channel crowdsource --input training_data/images --limit 10
+
+# Enable UVDocNet dewarping (opt-in — only useful for severely warped raw phone photos)
+python ec8a_extract.py --source-channel crowdsource --dewarp --input training_data/images --output results.csv
 ```
+
+The `--source-channel` argument is required and controls routing/labeling. Dewarping is off by default for all channels; use `--dewarp` to opt in (crowdsource only). See `docs/decisions/2026-05-13-dewarp-ab-test.md` for the A/B evidence behind this default.
 
 See `.env.example` for environment variable setup.
 
