@@ -20,6 +20,7 @@ training_data_ocr_test/
 
 # Python
 __pycache__/
+**/__pycache__/
 *.pyc
 *.pyo
 
@@ -29,7 +30,15 @@ surya_results/
 # Demo
 demo/.env
 demo/__pycache__/
+**/.env
 
-# Jupyter / notebook checkpoints
+# Jupyter checkpoints (but DO track .ipynb files themselves)
 .ipynb_checkpoints/
-*.ipynb
+**/.ipynb_checkpoints/
+
+# Archives
+*.tar.gz
+*.zip
+
+# Runtime artifacts
+OCR/temp_composite.jpg

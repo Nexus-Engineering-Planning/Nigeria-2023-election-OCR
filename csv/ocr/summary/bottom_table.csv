@@ -1,0 +1,626 @@
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.9038734436035156],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+AA,,,,[0.9170267581939696],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+AAC,,,,[0.9220126271247864],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+ADC,,,,[0.9274137020111084],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+ADP,,,,[0.926636517047882],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+APC,77,Seventy Seven,,"[0.8620335459709167, 0.8046495318412781, 0.9192981719970704]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+APGA,,,,[0.9279065132141112],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+APM,,,,[0.933337926864624],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+APP,,,,[0.9288095831871032],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+BP,,,,[0.9208873510360718],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+LP,7,Seven,,"[0.8661349415779114, 0.8335293531417847, 0.9285274147987366]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+NNPP,,,,[0.930619180202484],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+NRM,,,,[0.9207253456115724],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+PDP,1,one,,"[0.8727346658706665, 0.9318556189537048, 0.7691720724105835]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+SDP,,,,[0.912452757358551],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+YPP,,,,[0.9255733489990234],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+ZLP,,,,"[0.9161028265953064, 0.843977153301239]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,"[0.8952863216400146, 0.5796834826469421]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+AA,,,,[0.8937200903892517],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+AAC,,,,[0.8777236938476562],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+ADC,,,,[0.8942806124687195],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+ADP,,,,[0.9034216403961182],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+APC,352,Three hundre,True,"[0.7589154839515686, 0.6849857568740845, 0.5396746397018433, 0.8977236151695251]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+APGA,,,,[0.8746562600135803],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+APM,,,,[0.8867124915122986],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+APP,,,,[0.8992007970809937],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+BP,,,,[0.8914719223976135],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+LP,,,,[0.8880441188812256],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+NNPP,,One,,"[0.8228780627250671, 0.8689092397689819, 0.8736951947212219]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+NRM,0,,,"[0.85770183801651, 0.908979594707489]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+PDP,16,Sixteen,,"[0.908369481563568, 0.8553390502929688, 0.8634483814239502]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+SDP,,,,[0.9165087938308716],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+YPP,,,,[0.9162223935127258],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+ZLP,,,,[0.8724518418312073],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.8969821929931641],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+AA,,,,"[0.8276451230049133, 0.8866941332817078]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+AAC,,,,[0.8762961626052856],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+ADC,,ONE,True,"[0.8577772974967957, 0.6280360817909241, 0.6677977442741394, 0.742841899394989, 0.8989764451980591]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+ADP,,,,[0.9074946045875548],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+APC,39,Threaty,True,"[0.765884518623352, 0.7419307827949524, 0.6841905117034912, 0.290879338979721, 0.8997066020965576]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+APGA,,,,[0.9213364720344543],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+APM,,,,[0.914184868335724],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+APP,,,,[0.9040288925170898],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+BP,,,,[0.9272004961967468],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+LP,XLIL,,True,"[0.7322384119033813, 0.7426586151123047, 0.9179350137710572, 0.5755612254142761]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+NNPP,"1,5un",,,"[0.9013273119926452, 0.5108887553215027]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+NRM,,,,[0.9149793982505798],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+PDP,9,NINE,True,"[0.8504575490951538, 0.7089069485664368, 0.8951221704483032, 0.8451786637306213, 0.3895304203033447]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+SDP,,,,[0.9237844944000244],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+YPP,,,,[0.910041093826294],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+ZLP,with,,True,"[0.9264026880264282, 0.5080755949020386, 0.29140505194664]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,B,ZERO,,"[0.8798764944076538, 0.8699195384979248, 0.8134393692016602]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+AA,O,ZERO,,"[0.8961336016654968, 0.8771973252296448, 0.8227356672286987]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+AAC,,ZERO,,"[0.8772597908973694, 0.7868768572807312, 0.8723041415214539]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+ADC,0,ZERO,,"[0.8957027196884155, 0.7777138352394104, 0.8826441168785095]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+ADP,,,,"[0.900651216506958, 0.8739703893661499]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+APC,,ONE,,"[0.9017614722251892, 0.8104112148284912, 0.8665343523025513]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+APGA,,ZERO,True,"[0.8740419745445251, 0.8703179955482483, 0.8393304347991943, 0.6408767104148865]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+APM,0,ZERO,,"[0.9042997360229492, 0.8679970502853394, 0.7597767114639282]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+APP,0,ZERO,,"[0.9043511748313904, 0.8603362441062927, 0.648992657661438]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+BP,e,ZERO,,"[0.905944526195526, 0.8615556359291077, 0.4932580590248108]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+LP,C,ZERO,,"[0.9120389819145204, 0.8685913681983948, 0.4226527512073517]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+NNPP,0,ZERO,,"[0.8837957382202148, 0.8633881211280823, 0.5423980355262756]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+NRM,0,ZERO,,"[0.8894593119621277, 0.8725770115852356, 0.5328011512756348]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+PDP,1,ONE,,"[0.8939442038536072, 0.8511369824409485, 0.8573703169822693]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+SDP,0,ZERO,,"[0.885827362537384, 0.773499071598053, 0.7608429789543152]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+YPP,0,ZERO,,"[0.776893675327301, 0.8795463442802429, 0.8604761362075806]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+ZLP,0,ZERO,,"[0.7825396060943604, 0.8995882272720337, 0.8430942893028259]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.9038212299346924],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+AA,,,,[0.8974819779396057],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+AAC,,,,[0.8948290348052979],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+ADC,,,,[0.9102663993835448],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+ADP,2,Two,True,"[0.8799610733985901, 0.8320181965827942, 0.7485447525978088, 0.9174154996871948]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+APC,37,THIRTY SEVEN,True,"[0.849236249923706, 0.801931619644165, 0.8087967038154602, 0.9151585698127748]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+APGA,,,,[0.9100465774536132],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+APM,,,,[0.915915071964264],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+APP,,,,[0.918020486831665],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+BP,,,,[0.9090550541877748],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+LP,5,five,True,"[0.8758090734481812, 0.8048426508903503, 0.7827250957489014, 0.907117486000061]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+NNPP,7,SECEN,,"[0.7766356468200684, 0.9052451252937316, 0.8715737462043762]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+NRM,,,,[0.909998059272766],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+PDP,24,TWENTY four,,"[0.809822678565979, 0.8417593240737915, 0.9088749885559082, 0.8241676092147827]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+SDP,,,,[0.9129623174667358],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+YPP,,,,[0.9065415859222412],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+ZLP,,,,[0.8809984922409058],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.9079794883728028],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+AA,,,,[0.9215953946113586],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+AAC,,,,[0.9176638126373292],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+ADC,,,,[0.911562442779541],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+ADP,,one,,"[0.9282057881355286, 0.8914922475814819, 0.8304260969161987]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+APC,44,FOURTY FOUR,,"[0.9259353876113892, 0.8744021058082581, 0.8013024926185608]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+APGA,,,,[0.9265825152397156],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+APM,,ONE,,"[0.9263051152229308, 0.8573915958404541, 0.8331176042556763]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+APP,,,,[0.9140766859054564],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+BP,,,,[0.9185174703598022],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+LP,5,FIVE,,"[0.9158573150634766, 0.8876858949661255, 0.8310477137565613]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+NNPP,2,TWIO,,"[0.8944600820541382, 0.8825592398643494, 0.8083141446113586]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+NRM,,,,[0.9019725322723388],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+PDP,68,sixiy EIGHT,True,"[0.2930190861225128, 0.8974121809005737, 0.8541178107261658, 0.7704912424087524]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+SDP,,,,[0.8828954696655273],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+YPP,,,,[0.8794273138046265],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+ZLP,,,,[0.8763190507888794],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,0,ZERO,,"[0.8174282908439636, 0.8889104723930359, 0.862076461315155]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+AA,01,ONE,,"[0.8255806565284729, 0.876203715801239, 0.8514087796211243]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+AAC,0,ZERO,,"[0.8775054216384888, 0.7801973819732666, 0.880332350730896]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+ADC,0,ZERO,,"[0.8085194230079651, 0.8854256272315979, 0.8762370347976685]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+ADP,O,ZERO,,"[0.8208783268928528, 0.8719227313995361, 0.8795397877693176]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+APC,58,FIFTY EIGHT,True,"[0.8581952452659607, 0.8037406206130981, 0.3603087663650512, 0.3584361672401428, 0.8806737661361694]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+APGA,O,ZERO,,"[0.8581066131591797, 0.845962643623352, 0.8856492042541504]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+APM,,ZERO,,"[0.8086280822753906, 0.8790233135223389, 0.8814389705657959]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+APP,,ZERO,,"[0.8447619676589966, 0.8567363619804382, 0.8379738926887512]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+BP,,ZERO,,"[0.8519732356071472, 0.8670458793640137, 0.8858475685119629]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+LP,03,THREE,True,"[0.8262614607810974, 0.8411535024642944, 0.7009239792823792, 0.8956563472747803]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+NNPP,04,FOUR,True,"[0.7895896434783936, 0.8359533548355103, 0.7411651611328125, 0.862447202205658]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+NRM,0,ZERO,,"[0.8602811098098755, 0.8544424176216125, 0.8527407050132751]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+PDP,52,HELPTY TWO,True,"[0.8475296497344971, 0.819765031337738, 0.7414976358413696, 0.8859161734580994]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+SDP,,ZERO,,"[0.8431653380393982, 0.8754106163978577, 0.3774011433124542]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+YPP,0,ZERO,,"[0.8633418679237366, 0.8677716255187988, 0.8742920160293579]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+ZLP,OTHER,ZERO,,"[0.4261037707328796, 0.8295825719833374, 0.8870975375175476]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.8856500387191772],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+AA,,,,[0.8781599402427673],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+AAC,,,,[0.8752388954162598],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+ADC,,,,[0.8573991656303406],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+ADP,,,,"[0.4689060747623443, 0.8552592992782593]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+APC,,,,[0.8769726157188416],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+APGA,,,,[0.8846176266670227],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+APM,,,,[0.8853147029876709],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+APP,,,,[0.8726921677589417],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+BP,,,,[0.901232659816742],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+LP,,,,[0.9142636656761168],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+NNPP,,,,[0.9050502181053162],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+NRM,,,,[0.8941250443458557],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+PDP,,,,[0.9054558873176576],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+SDP,,,,[0.9021996259689332],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+YPP,,,,[0.8926517367362976],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+ZLP,,,,[0.8946806192398071],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.9194694757461548],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+AA,,,,[0.9048566818237304],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+AAC,,,,[0.9023523926734924],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+ADC,,,,"[0.5881946682929993, 0.8948907256126404]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+ADP,9,,,"[0.6053073406219482, 0.9112332463264464]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+APC,Two 2,Two,,"[0.5376944541931152, 0.9128934741020204, 0.7941477298736572]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+APGA,1,ONE,True,"[0.7532458305358887, 0.7921907305717468, 0.9060635566711426, 0.761493444442749]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+APM,,,,[0.8982006907463074],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+APP,,,,[0.907806158065796],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+BP,,,,"[0.8404062390327454, 0.9160321354866028]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+LP,163,one ONE hundred,True,"[0.8186718821525574, 0.721342921257019, 0.7858228087425232, 0.9144830703735352]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+NNPP,,,,[0.8876129388809204],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+NRM,,,,[0.8839132189750671],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+PDP,3,THREE,True,"[0.772525429725647, 0.7785875201225281, 0.9032627940177916, 0.8662940859794617]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+SDP,,,,[0.8839032053947449],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+YPP,,,True,"[0.8512541055679321, 0.8771108984947205]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+ZLP,,one hundred,,"[0.8866322040557861, 0.7662776112556458]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,I,ONE,,"[0.8835892081260681, 0.8530815839767456, 0.8953959941864014]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+AA,,,,[0.8871847987174988],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+AAC,,,,[0.8855069875717163],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+ADC,,,,[0.8918886780738831],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+ADP,,,,[0.8803897500038147],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+APC,,,,[0.8739631175994873],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+APGA,,,,[0.8698388338088989],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+APM,1,ONE,,"[0.8511082530021667, 0.8514484167098999, 0.8832738399505615]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+APP,,,,[0.9032025337219238],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+BP,,,,[0.8885011672973633],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+LP,183 $10,EIGHTY. THREAT,True,"[0.6996796131134033, 0.7460898756980896, 0.7075193524360657, 0.4463354051113128, 0.8797370791435242, 0.7457308769226074]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+NNPP,,,,[0.862767219543457],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+NRM,,,,[0.8782390356063843],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+PDP,,,,[0.8803531527519226],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+SDP,,,,[0.886540949344635],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+YPP,,,,[0.8884844183921814],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+ZLP,,,,[0.889509916305542],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.894042432308197],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+AA,,,,[0.9020802974700928],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+AAC,,,,[0.8913222551345825],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+ADC,,,,[0.8874043822288513],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+ADP,,,,[0.8988826274871826],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+APC,3,Three,True,"[0.8777517676353455, 0.8309972286224365, 0.7333787679672241, 0.9153512120246888]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+APGA,,,,[0.9124961495399476],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+APM,,,,[0.9041953086853028],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+APP,,,,[0.9196975231170654],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+BP,,,,[0.929198920726776],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+LP,59,Fifty-Mine,True,"[0.852349042892456, 0.7639769911766052, 0.8085006475448608, 0.9179728031158448]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+NNPP,1,one,,"[0.9125673174858092, 0.8742395043373108, 0.8568680286407471, 0.4208701252937317]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+NRM,,,,[0.9262850880622864],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+PDP,1,one,True,"[0.8205714225769043, 0.9211180210113524, 0.87468421459198, 0.864208996295929]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+SDP,,,,[0.9214456677436828],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+YPP,of,One,,"[0.9193328619003296, 0.8829396367073059, 0.8489493131637573]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+ZLP,,,,[0.903011679649353],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.906444013118744],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+AA,,,,[0.8796444535255432],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+AAC,,,,[0.8780422210693359],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+ADC,1,one,,"[0.8795106410980225, 0.8262557983398438, 0.8934085965156555]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+ADP,,,,[0.8944608569145203],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+APC,2,Two,,"[0.8556430339813232, 0.8875706791877747, 0.7998424768447876]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+APGA,1,one,True,"[0.7180056571960449, 0.8974927663803101, 0.8813963532447815, 0.8400963544845581]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+APM,,,,[0.8822125196456909],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+APP,,,,[0.9106956720352172],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+BP,,,,[0.9159047603607178],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+LP,91,Allacty One,True,"[0.7880287170410156, 0.7000516057014465, 0.5560092926025391, 0.9106814861297609, 0.5516291260719299]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+NNPP,,,,[0.91318678855896],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+NRM,,,,[0.908799171447754],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+PDP,,,,[0.9091935753822328],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+SDP,,,,[0.90783953666687],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+YPP,1,one,True,"[0.823123574256897, 0.5250951051712036, 0.3149469792842865, 0.9038376808166504, 0.8639615774154663]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+ZLP,,,,[0.8972184062004089],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.9149210453033448],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+AA,,,,[0.8941354751586914],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+AAC,,,,[0.8913795351982117],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+ADC,,,,[0.9072546362876892],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+ADP,,,True,"[0.9090463519096376, 0.7963834404945374]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+APC,4,FOUR,,"[0.810785710811615, 0.9096996784210204, 0.8235223889350891]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+APGA,,,,[0.9114431142807008],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+APM,,,,[0.902572751045227],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+APP,,,,"[0.9112813472747804, 0.7877301573753357]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+BP,,,,[0.9288119673728944],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+LP,42-,FORTHY Two-,True,"[0.8410521745681763, 0.9185563325881958, 0.8442410826683044, 0.778723418712616]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+NNPP,,,,[0.9147548079490662],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+NRM,,,,[0.9208135008811952],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+PDP,,,True,"[0.7510421872138977, 0.91634863615036]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+SDP,,,,[0.9129599928855896],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+YPP,,,,[0.9138211011886596],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+ZLP,,,,[0.9077792167663574],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,0,ZERO,,"[0.7735764980316162, 0.7708413004875183, 0.3042100965976715]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+AA,,ONE,,"[0.5396350622177124, 0.7555790543556213]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+AAC,01,ONE,,"[0.7968679070472717, 0.7743484973907471, 0.8526342511177063]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+ADC,,ONE,,"[0.7865338325500488, 0.8437942266464233]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+ADP,,ONE,,"[0.8549286723136902, 0.731782853603363]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+APC,5,FIVE,,"[0.849492609500885, 0.2822777330875397, 0.7671093940734863]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+APGA,6,SAX,,"[0.5984237194061279, 0.825066328048706, 0.8345867991447449]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+APM,0,ZERO,,"[0.7729562520980835, 0.8625090718269348, 0.8223069310188293]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+APP,0,ZERO,,"[0.8003775477409363, 0.8510953187942505, 0.7214395403862]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+BP,0,ZERO,,"[0.7870620489120483, 0.8827587366104126, 0.7781921625137329]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+NNPP,O,ZERO,,"[0.8321892023086548, 0.6867367625236511, 0.4556471407413482]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+NRM,0,ZERO,,"[0.8803930878639221, 0.7385777235031128, 0.6587961912155151]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+PDP,,FAVE,True,"[0.8828796148300171, 0.8246462345123291, 0.7674579620361328]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+SDP,,ONE,,"[0.8878225088119507, 0.8649187088012695]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+YPP,,TWO,,"[0.8954157829284668, 0.8668933510780334, 0.4554344117641449]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+ZLP,0,ZERO,,"[0.8695418834686279, 0.8669585585594177, 0.8436434268951416]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.910657286643982],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+AA,L,one,,"[0.9126538634300232, 0.8713412880897522, 0.8564832806587219]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+AAC,I,,,"[0.3791877329349518, 0.9082661271095276]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+ADC,,,,"[0.5318611264228821, 0.9120636582374572]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+ADP,,,,[0.9123964905738832],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+APC,1,one,True,"[0.9161824584007264, 0.8921871185302734, 0.7831459641456604, 0.7673883438110352]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+APGA,2,Two,True,"[0.7547163963317871, 0.9145172834396362, 0.8921177387237549, 0.8454021215438843]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+APM,,,,[0.9204780459403992],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+APP,,,,"[0.924413800239563, 0.270080417394638]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+BP,,,,[0.9239752888679504],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+LP,197,Onehungred seven,True,"[0.8043361306190491, 0.7352356314659119, 0.7782119512557983, 0.9282857179641724, 0.7562704086303711]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+NNPP,,,,[0.9205170273780824],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+NRM,,,,[0.9245330095291138],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+PDP,M,THREE,True,"[0.9223531484603882, 0.8750131726264954, 0.859215259552002, 0.8339917659759521]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+SDP,,,,[0.921126127243042],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+YPP,,,True,"[0.9285546541213988, 0.7280391454696655]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+ZLP,,,,[0.9314261078834534],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,,,,[0.9107517004013062],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+AA,,,,[0.8804715275764465],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+AAC,,,,[0.8655335903167725],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+ADC,,,,[0.8759824633598328],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+ADP,,,,[0.8703540563583374],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+APC,I,ONE,True,"[0.8817245960235596, 0.3776834607124328, 0.6359756588935852, 0.7735595107078552]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+APGA,,ONE,True,"[0.8729391098022461, 0.4318500757217407, 0.5394450426101685]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+APM,,,,[0.885854959487915],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+APP,,ONE,True,"[0.8926530480384827, 0.8504778146743774, 0.4498342871665954]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+LP,,FOURT TWO,True,"[0.2755626142024994, 0.8981757760047913, 0.8270746469497681]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+NNPP,,ONGAGNORED AHD,True,"[0.7196988463401794, 0.782155454158783, 0.8795359134674072]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+NRM,,,,[0.891270637512207],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+PDP,3,THREE,True,"[0.4763700664043426, 0.8907420635223389, 0.8683690428733826, 0.5230751633644104]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+SDP,,,,[0.8913440108299255],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+YPP,,,,[0.9112150073051452],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+ZLP,,,,[0.9017590284347534],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,Nil,,,"[0.9116618037223816, 0.826055645942688]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+AA,Nil,,,"[0.903747022151947, 0.8303367495536804]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+AAC,Nd,,,"[0.8528687357902527, 0.8900556564331055]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+ADC,Nil,,,"[0.8813086152076721, 0.8022426962852478]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+ADP,Nil,,True,"[0.8864933252334595, 0.8930050134658813, 0.8479331731796265]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+APC,Nil,,,"[0.88972407579422, 0.8765891790390015]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+APGA,Nil,,True,"[0.8862664103507996, 0.7970672249794006, 0.8710346221923828]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+APM,Nil,,,"[0.8968657851219177, 0.8744881749153137]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+APP,NU.,,,"[0.8779616355895996, 0.8819507360458374]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+BP,Nil,,,"[0.8772546648979187, 0.8803204894065857]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+LP,5,Five,,"[0.8564072251319885, 0.8327575325965881, 0.8804132342338562]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+NNPP,Nil,,,"[0.8694599866867065, 0.902535080909729]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+NRM,- Nil,,True,"[0.8963003158569336, 0.9131619334220886, 0.6050875782966614]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+PDP,Nil,,True,"[0.9121872186660768, 0.8691127300262451, 0.7682540416717529]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+SDP,Nd,,,"[0.8830179572105408, 0.8745763301849365]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+YPP,Nil,,,"[0.9011316299438475, 0.8926360607147217]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+ZLP,Nil-,,,"[0.8906335830688477, 0.905601441860199]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+Political Party,Vote Score (Figure),Vote Score (Word),Signature,confidence,image_path
+A,@,Zero,,"[0.9245052933692932, 0.9093801379203796, 0.879746675491333]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+AA,D,zero,,"[0.9261770844459534, 0.9223092198371888, 0.8724169135093689]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+AAC,0,Zero,,"[0.9210469126701356, 0.9115018248558044, 0.8681054711341858]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+ADC,0,zero,,"[0.924192488193512, 0.9053846597671508, 0.8658601641654968]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+ADP,0,zero,,"[0.9168275594711304, 0.89674973487854, 0.854604959487915]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+APC,,One,,"[0.9193580150604248, 0.6766572594642639, 0.87957364320755]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+APGA,0,zero,True,"[0.8685128092765808, 0.9242239594459534, 0.9071071743965148, 0.8594767451286316]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+APM,0,2ero,,"[0.9303070902824402, 0.9063591957092284, 0.8625342845916748]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+APP,0,2ero,,"[0.9248600006103516, 0.8897232413291931, 0.8574203252792358]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+BP,02,2:enD,,"[0.917794942855835, 0.7709959745407104, 0.8389191627502441]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+LP,217,TWD Seventeen 2:errD hundred and,True,"[0.8144221901893616, 0.7550420165061951, 0.9264326691627502, 0.8973723649978638]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+NNPP,D,2ero,,"[0.9267889857292176, 0.8956651091575623, 0.8552923202514648]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+NRM,0,2ero,,"[0.918228805065155, 0.8992367386817932, 0.8277395963668823]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+PDP,2,TWO,True,"[0.9220303297042848, 0.8424948453903198, 0.8922357559204102, 0.8454499244689941]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+SDP,0,Zero,,"[0.9207998514175416, 0.8901864290237427, 0.8644404411315918]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+YPP,1,one,True,"[0.9109230041503906, 0.8573399782180786, 0.900853991508484, 0.8632787466049194]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+ZLP,0,Zero,,"[0.9078046679496764, 0.8935214281082153, 0.8620377779006958]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+A,,,,[0.9038734436035156],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+AA,,,,[0.9170267581939696],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+AAC,,,,[0.9220126271247864],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+ADC,,,,[0.9274137020111084],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+ADP,,,,[0.926636517047882],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+APC,77,Seventy Seven,,"[0.8620335459709167, 0.8046495318412781, 0.9192981719970704]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+APGA,,,,[0.9279065132141112],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+APM,,,,[0.933337926864624],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+APP,,,,[0.9288095831871032],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+BP,,,,[0.9208873510360718],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+LP,7,Seven,,"[0.8661349415779114, 0.8335293531417847, 0.9285274147987366]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+NNPP,,,,[0.930619180202484],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+NRM,,,,[0.9207253456115724],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+PDP,1,one,,"[0.8727346658706665, 0.9318556189537048, 0.7691720724105835]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+SDP,,,,[0.912452757358551],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+YPP,,,,[0.9255733489990234],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+ZLP,,,,"[0.9161028265953064, 0.843977153301239]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_028_unwrap.jpg
+A,,,,"[0.8952863216400146, 0.5796834826469421]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+AA,,,,[0.8937200903892517],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+AAC,,,,[0.8777236938476562],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+ADC,,,,[0.8942806124687195],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+ADP,,,,[0.9034216403961182],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+APC,352,Three hundre,True,"[0.7589154839515686, 0.6849857568740845, 0.5396746397018433, 0.8977236151695251]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+APGA,,,,[0.8746562600135803],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+APM,,,,[0.8867124915122986],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+APP,,,,[0.8992007970809937],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+BP,,,,[0.8914719223976135],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+LP,,,,[0.8880441188812256],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+NNPP,,One,,"[0.8228780627250671, 0.8689092397689819, 0.8736951947212219]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+NRM,0,,,"[0.85770183801651, 0.908979594707489]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+PDP,16,Sixteen,,"[0.908369481563568, 0.8553390502929688, 0.8634483814239502]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+SDP,,,,[0.9165087938308716],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+YPP,,,,[0.9162223935127258],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+ZLP,,,,[0.8724518418312073],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_016_unwrap.jpg
+A,,,,[0.8969821929931641],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+AA,,,,"[0.8276451230049133, 0.8866941332817078]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+AAC,,,,[0.8762961626052856],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+ADC,,ONE,True,"[0.8577772974967957, 0.6280360817909241, 0.6677977442741394, 0.742841899394989, 0.8989764451980591]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+ADP,,,,[0.9074946045875548],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+APC,39,Threaty,True,"[0.765884518623352, 0.7419307827949524, 0.6841905117034912, 0.290879338979721, 0.8997066020965576]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+APGA,,,,[0.9213364720344543],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+APM,,,,[0.914184868335724],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+APP,,,,[0.9040288925170898],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+BP,,,,[0.9272004961967468],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+LP,XLIL,,True,"[0.7322384119033813, 0.7426586151123047, 0.9179350137710572, 0.5755612254142761]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+NNPP,"1,5un",,,"[0.9013273119926452, 0.5108887553215027]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+NRM,,,,[0.9149793982505798],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+PDP,9,NINE,True,"[0.8504575490951538, 0.7089069485664368, 0.8951221704483032, 0.8451786637306213, 0.3895304203033447]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+SDP,,,,[0.9237844944000244],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+YPP,,,,[0.910041093826294],../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+ZLP,with,,True,"[0.9264026880264282, 0.5080755949020386, 0.29140505194664]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_047_unwrap.jpg
+A,B,ZERO,,"[0.8798764944076538, 0.8699195384979248, 0.8134393692016602]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+AA,O,ZERO,,"[0.8961336016654968, 0.8771973252296448, 0.8227356672286987]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+AAC,,ZERO,,"[0.8772597908973694, 0.7868768572807312, 0.8723041415214539]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+ADC,0,ZERO,,"[0.8957027196884155, 0.7777138352394104, 0.8826441168785095]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+ADP,,,,"[0.900651216506958, 0.8739703893661499]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+APC,,ONE,,"[0.9017614722251892, 0.8104112148284912, 0.8665343523025513]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+APGA,,ZERO,True,"[0.8740419745445251, 0.8703179955482483, 0.8393304347991943, 0.6408767104148865]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+APM,0,ZERO,,"[0.9042997360229492, 0.8679970502853394, 0.7597767114639282]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+APP,0,ZERO,,"[0.9043511748313904, 0.8603362441062927, 0.648992657661438]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+BP,e,ZERO,,"[0.905944526195526, 0.8615556359291077, 0.4932580590248108]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+LP,C,ZERO,,"[0.9120389819145204, 0.8685913681983948, 0.4226527512073517]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+NNPP,0,ZERO,,"[0.8837957382202148, 0.8633881211280823, 0.5423980355262756]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+NRM,0,ZERO,,"[0.8894593119621277, 0.8725770115852356, 0.5328011512756348]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+PDP,1,ONE,,"[0.8939442038536072, 0.8511369824409485, 0.8573703169822693]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+SDP,0,ZERO,,"[0.885827362537384, 0.773499071598053, 0.7608429789543152]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+YPP,0,ZERO,,"[0.776893675327301, 0.8795463442802429, 0.8604761362075806]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+ZLP,0,ZERO,,"[0.7825396060943604, 0.8995882272720337, 0.8430942893028259]",../test_images/batch_test/unwrapped_files_jpg/state_22/lga_05/ward_10/22_05_10_010_unwrap.jpg
+A,,,,[0.9038212299346924],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+AA,,,,[0.8974819779396057],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+AAC,,,,[0.8948290348052979],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+ADC,,,,[0.9102663993835448],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+ADP,2,Two,True,"[0.8799610733985901, 0.8320181965827942, 0.7485447525978088, 0.9174154996871948]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+APC,37,THIRTY SEVEN,True,"[0.849236249923706, 0.801931619644165, 0.8087967038154602, 0.9151585698127748]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+APGA,,,,[0.9100465774536132],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+APM,,,,[0.915915071964264],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+APP,,,,[0.918020486831665],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+BP,,,,[0.9090550541877748],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+LP,5,five,True,"[0.8758090734481812, 0.8048426508903503, 0.7827250957489014, 0.907117486000061]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+NNPP,7,SECEN,,"[0.7766356468200684, 0.9052451252937316, 0.8715737462043762]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+NRM,,,,[0.909998059272766],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+PDP,24,TWENTY four,,"[0.809822678565979, 0.8417593240737915, 0.9088749885559082, 0.8241676092147827]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+SDP,,,,[0.9129623174667358],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+YPP,,,,[0.9065415859222412],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+ZLP,,,,[0.8809984922409058],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_023_unwrap.jpg
+A,,,,[0.9079794883728028],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+AA,,,,[0.9215953946113586],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+AAC,,,,[0.9176638126373292],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+ADC,,,,[0.911562442779541],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+ADP,,one,,"[0.9282057881355286, 0.8914922475814819, 0.8304260969161987]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+APC,44,FOURTY FOUR,,"[0.9259353876113892, 0.8744021058082581, 0.8013024926185608]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+APGA,,,,[0.9265825152397156],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+APM,,ONE,,"[0.9263051152229308, 0.8573915958404541, 0.8331176042556763]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+APP,,,,[0.9140766859054564],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+BP,,,,[0.9185174703598022],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+LP,5,FIVE,,"[0.9158573150634766, 0.8876858949661255, 0.8310477137565613]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+NNPP,2,TWIO,,"[0.8944600820541382, 0.8825592398643494, 0.8083141446113586]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+NRM,,,,[0.9019725322723388],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+PDP,68,sixiy EIGHT,True,"[0.2930190861225128, 0.8974121809005737, 0.8541178107261658, 0.7704912424087524]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+SDP,,,,[0.8828954696655273],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+YPP,,,,[0.8794273138046265],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+ZLP,,,,[0.8763190507888794],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_014_unwrap.jpg
+A,0,ZERO,,"[0.8174282908439636, 0.8889104723930359, 0.862076461315155]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+AA,01,ONE,,"[0.8255806565284729, 0.876203715801239, 0.8514087796211243]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+AAC,0,ZERO,,"[0.8775054216384888, 0.7801973819732666, 0.880332350730896]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+ADC,0,ZERO,,"[0.8085194230079651, 0.8854256272315979, 0.8762370347976685]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+ADP,O,ZERO,,"[0.8208783268928528, 0.8719227313995361, 0.8795397877693176]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+APC,58,FIFTY EIGHT,True,"[0.8581952452659607, 0.8037406206130981, 0.3603087663650512, 0.3584361672401428, 0.8806737661361694]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+APGA,O,ZERO,,"[0.8581066131591797, 0.845962643623352, 0.8856492042541504]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+APM,,ZERO,,"[0.8086280822753906, 0.8790233135223389, 0.8814389705657959]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+APP,,ZERO,,"[0.8447619676589966, 0.8567363619804382, 0.8379738926887512]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+BP,,ZERO,,"[0.8519732356071472, 0.8670458793640137, 0.8858475685119629]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+LP,03,THREE,True,"[0.8262614607810974, 0.8411535024642944, 0.7009239792823792, 0.8956563472747803]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+NNPP,04,FOUR,True,"[0.7895896434783936, 0.8359533548355103, 0.7411651611328125, 0.862447202205658]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+NRM,0,ZERO,,"[0.8602811098098755, 0.8544424176216125, 0.8527407050132751]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+PDP,52,HELPTY TWO,True,"[0.8475296497344971, 0.819765031337738, 0.7414976358413696, 0.8859161734580994]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+SDP,,ZERO,,"[0.8431653380393982, 0.8754106163978577, 0.3774011433124542]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+YPP,0,ZERO,,"[0.8633418679237366, 0.8677716255187988, 0.8742920160293579]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+ZLP,OTHER,ZERO,,"[0.4261037707328796, 0.8295825719833374, 0.8870975375175476]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_004_unwrap.jpg
+A,,,,[0.8856500387191772],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+AA,,,,[0.8781599402427673],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+AAC,,,,[0.8752388954162598],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+ADC,,,,[0.8573991656303406],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+ADP,,,,"[0.4689060747623443, 0.8552592992782593]",../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+APC,,,,[0.8769726157188416],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+APGA,,,,[0.8846176266670227],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+APM,,,,[0.8853147029876709],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+APP,,,,[0.8726921677589417],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+BP,,,,[0.901232659816742],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+LP,,,,[0.9142636656761168],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+NNPP,,,,[0.9050502181053162],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+NRM,,,,[0.8941250443458557],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+PDP,,,,[0.9054558873176576],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+SDP,,,,[0.9021996259689332],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+YPP,,,,[0.8926517367362976],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+ZLP,,,,[0.8946806192398071],../test_images/batch_test/unwrapped_files_jpg/state_02/lga_14/ward_04/02_14_04_024_unwrap.jpg
+A,,,,[0.9194694757461548],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+AA,,,,[0.9048566818237304],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+AAC,,,,[0.9023523926734924],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+ADC,,,,"[0.5881946682929993, 0.8948907256126404]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+ADP,9,,,"[0.6053073406219482, 0.9112332463264464]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+APC,Two 2,Two,,"[0.5376944541931152, 0.9128934741020204, 0.7941477298736572]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+APGA,1,ONE,True,"[0.7532458305358887, 0.7921907305717468, 0.9060635566711426, 0.761493444442749]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+APM,,,,[0.8982006907463074],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+APP,,,,[0.907806158065796],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+BP,,,,"[0.8404062390327454, 0.9160321354866028]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+LP,163,one ONE hundred,True,"[0.8186718821525574, 0.721342921257019, 0.7858228087425232, 0.9144830703735352]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+NNPP,,,,[0.8876129388809204],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+NRM,,,,[0.8839132189750671],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+PDP,3,THREE,True,"[0.772525429725647, 0.7785875201225281, 0.9032627940177916, 0.8662940859794617]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+SDP,,,,[0.8839032053947449],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+YPP,,,True,"[0.8512541055679321, 0.8771108984947205]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+ZLP,,one hundred,,"[0.8866322040557861, 0.7662776112556458]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_001_unwrap.jpg
+A,I,ONE,,"[0.8835892081260681, 0.8530815839767456, 0.8953959941864014]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+AA,,,,[0.8871847987174988],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+AAC,,,,[0.8855069875717163],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+ADC,,,,[0.8918886780738831],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+ADP,,,,[0.8803897500038147],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+APC,,,,[0.8739631175994873],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+APGA,,,,[0.8698388338088989],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+APM,1,ONE,,"[0.8511082530021667, 0.8514484167098999, 0.8832738399505615]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+APP,,,,[0.9032025337219238],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+BP,,,,[0.8885011672973633],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+LP,183 $10,EIGHTY. THREAT,True,"[0.6996796131134033, 0.7460898756980896, 0.7075193524360657, 0.4463354051113128, 0.8797370791435242, 0.7457308769226074]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+NNPP,,,,[0.862767219543457],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+NRM,,,,[0.8782390356063843],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+PDP,,,,[0.8803531527519226],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+SDP,,,,[0.886540949344635],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+YPP,,,,[0.8884844183921814],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+ZLP,,,,[0.889509916305542],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_07/01_01_07_014_unwrap.jpg
+A,,,,[0.894042432308197],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+AA,,,,[0.9020802974700928],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+AAC,,,,[0.8913222551345825],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+ADC,,,,[0.8874043822288513],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+ADP,,,,[0.8988826274871826],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+APC,3,Three,True,"[0.8777517676353455, 0.8309972286224365, 0.7333787679672241, 0.9153512120246888]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+APGA,,,,[0.9124961495399476],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+APM,,,,[0.9041953086853028],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+APP,,,,[0.9196975231170654],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+BP,,,,[0.929198920726776],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+LP,59,Fifty-Mine,True,"[0.852349042892456, 0.7639769911766052, 0.8085006475448608, 0.9179728031158448]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+NNPP,1,one,,"[0.9125673174858092, 0.8742395043373108, 0.8568680286407471, 0.4208701252937317]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+NRM,,,,[0.9262850880622864],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+PDP,1,one,True,"[0.8205714225769043, 0.9211180210113524, 0.87468421459198, 0.864208996295929]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+SDP,,,,[0.9214456677436828],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+YPP,of,One,,"[0.9193328619003296, 0.8829396367073059, 0.8489493131637573]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+ZLP,,,,[0.903011679649353],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_021_unwrap.jpg
+A,,,,[0.906444013118744],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+AA,,,,[0.8796444535255432],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+AAC,,,,[0.8780422210693359],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+ADC,1,one,,"[0.8795106410980225, 0.8262557983398438, 0.8934085965156555]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+ADP,,,,[0.8944608569145203],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+APC,2,Two,,"[0.8556430339813232, 0.8875706791877747, 0.7998424768447876]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+APGA,1,one,True,"[0.7180056571960449, 0.8974927663803101, 0.8813963532447815, 0.8400963544845581]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+APM,,,,[0.8822125196456909],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+APP,,,,[0.9106956720352172],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+BP,,,,[0.9159047603607178],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+LP,91,Allacty One,True,"[0.7880287170410156, 0.7000516057014465, 0.5560092926025391, 0.9106814861297609, 0.5516291260719299]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+NNPP,,,,[0.91318678855896],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+NRM,,,,[0.908799171447754],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+PDP,,,,[0.9091935753822328],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+SDP,,,,[0.90783953666687],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+YPP,1,one,True,"[0.823123574256897, 0.5250951051712036, 0.3149469792842865, 0.9038376808166504, 0.8639615774154663]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+ZLP,,,,[0.8972184062004089],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_019_unwrap.jpg
+A,,,,[0.9149210453033448],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+AA,,,,[0.8941354751586914],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+AAC,,,,[0.8913795351982117],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+ADC,,,,[0.9072546362876892],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+ADP,,,True,"[0.9090463519096376, 0.7963834404945374]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+APC,4,FOUR,,"[0.810785710811615, 0.9096996784210204, 0.8235223889350891]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+APGA,,,,[0.9114431142807008],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+APM,,,,[0.902572751045227],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+APP,,,,"[0.9112813472747804, 0.7877301573753357]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+BP,,,,[0.9288119673728944],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+LP,42-,FORTHY Two-,True,"[0.8410521745681763, 0.9185563325881958, 0.8442410826683044, 0.778723418712616]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+NNPP,,,,[0.9147548079490662],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+NRM,,,,[0.9208135008811952],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+PDP,,,True,"[0.7510421872138977, 0.91634863615036]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+SDP,,,,[0.9129599928855896],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+YPP,,,,[0.9138211011886596],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+ZLP,,,,[0.9077792167663574],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_10/ward_10/01_10_10_013_unwrap.jpg
+A,0,ZERO,,"[0.7735764980316162, 0.7708413004875183, 0.3042100965976715]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+AA,,ONE,,"[0.5396350622177124, 0.7555790543556213]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+AAC,01,ONE,,"[0.7968679070472717, 0.7743484973907471, 0.8526342511177063]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+ADC,,ONE,,"[0.7865338325500488, 0.8437942266464233]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+ADP,,ONE,,"[0.8549286723136902, 0.731782853603363]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+APC,5,FIVE,,"[0.849492609500885, 0.2822777330875397, 0.7671093940734863]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+APGA,6,SAX,,"[0.5984237194061279, 0.825066328048706, 0.8345867991447449]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+APM,0,ZERO,,"[0.7729562520980835, 0.8625090718269348, 0.8223069310188293]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+APP,0,ZERO,,"[0.8003775477409363, 0.8510953187942505, 0.7214395403862]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+BP,0,ZERO,,"[0.7870620489120483, 0.8827587366104126, 0.7781921625137329]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+NNPP,O,ZERO,,"[0.8321892023086548, 0.6867367625236511, 0.4556471407413482]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+NRM,0,ZERO,,"[0.8803930878639221, 0.7385777235031128, 0.6587961912155151]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+PDP,,FAVE,True,"[0.8828796148300171, 0.8246462345123291, 0.7674579620361328]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+SDP,,ONE,,"[0.8878225088119507, 0.8649187088012695]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+YPP,,TWO,,"[0.8954157829284668, 0.8668933510780334, 0.4554344117641449]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+ZLP,0,ZERO,,"[0.8695418834686279, 0.8669585585594177, 0.8436434268951416]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_05/ward_08/01_05_08_007_unwrap.jpg
+A,,,,[0.910657286643982],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+AA,L,one,,"[0.9126538634300232, 0.8713412880897522, 0.8564832806587219]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+AAC,I,,,"[0.3791877329349518, 0.9082661271095276]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+ADC,,,,"[0.5318611264228821, 0.9120636582374572]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+ADP,,,,[0.9123964905738832],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+APC,1,one,True,"[0.9161824584007264, 0.8921871185302734, 0.7831459641456604, 0.7673883438110352]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+APGA,2,Two,True,"[0.7547163963317871, 0.9145172834396362, 0.8921177387237549, 0.8454021215438843]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+APM,,,,[0.9204780459403992],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+APP,,,,"[0.924413800239563, 0.270080417394638]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+BP,,,,[0.9239752888679504],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+LP,197,Onehungred seven,True,"[0.8043361306190491, 0.7352356314659119, 0.7782119512557983, 0.9282857179641724, 0.7562704086303711]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+NNPP,,,,[0.9205170273780824],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+NRM,,,,[0.9245330095291138],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+PDP,M,THREE,True,"[0.9223531484603882, 0.8750131726264954, 0.859215259552002, 0.8339917659759521]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+SDP,,,,[0.921126127243042],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+YPP,,,True,"[0.9285546541213988, 0.7280391454696655]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+ZLP,,,,[0.9314261078834534],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_04/01_01_04_007_unwrap.jpg
+A,,,,[0.9107517004013062],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+AA,,,,[0.8804715275764465],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+AAC,,,,[0.8655335903167725],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+ADC,,,,[0.8759824633598328],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+ADP,,,,[0.8703540563583374],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+APC,I,ONE,True,"[0.8817245960235596, 0.3776834607124328, 0.6359756588935852, 0.7735595107078552]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+APGA,,ONE,True,"[0.8729391098022461, 0.4318500757217407, 0.5394450426101685]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+APM,,,,[0.885854959487915],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+APP,,ONE,True,"[0.8926530480384827, 0.8504778146743774, 0.4498342871665954]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+LP,,FOURT TWO,True,"[0.2755626142024994, 0.8981757760047913, 0.8270746469497681]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+NNPP,,ONGAGNORED AHD,True,"[0.7196988463401794, 0.782155454158783, 0.8795359134674072]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+NRM,,,,[0.891270637512207],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+PDP,3,THREE,True,"[0.4763700664043426, 0.8907420635223389, 0.8683690428733826, 0.5230751633644104]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+SDP,,,,[0.8913440108299255],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+YPP,,,,[0.9112150073051452],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+ZLP,,,,[0.9017590284347534],../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_004_unwrap.jpg
+A,Nil,,,"[0.9116618037223816, 0.826055645942688]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+AA,Nil,,,"[0.903747022151947, 0.8303367495536804]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+AAC,Nd,,,"[0.8528687357902527, 0.8900556564331055]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+ADC,Nil,,,"[0.8813086152076721, 0.8022426962852478]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+ADP,Nil,,True,"[0.8864933252334595, 0.8930050134658813, 0.8479331731796265]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+APC,Nil,,,"[0.88972407579422, 0.8765891790390015]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+APGA,Nil,,True,"[0.8862664103507996, 0.7970672249794006, 0.8710346221923828]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+APM,Nil,,,"[0.8968657851219177, 0.8744881749153137]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+APP,NU.,,,"[0.8779616355895996, 0.8819507360458374]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+BP,Nil,,,"[0.8772546648979187, 0.8803204894065857]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+LP,5,Five,,"[0.8564072251319885, 0.8327575325965881, 0.8804132342338562]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+NNPP,Nil,,,"[0.8694599866867065, 0.902535080909729]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+NRM,- Nil,,True,"[0.8963003158569336, 0.9131619334220886, 0.6050875782966614]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+PDP,Nil,,True,"[0.9121872186660768, 0.8691127300262451, 0.7682540416717529]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+SDP,Nd,,,"[0.8830179572105408, 0.8745763301849365]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+YPP,Nil,,,"[0.9011316299438475, 0.8926360607147217]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+ZLP,Nil-,,,"[0.8906335830688477, 0.905601441860199]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_06/01_01_06_030_unwrap.jpg
+A,@,Zero,,"[0.9245052933692932, 0.9093801379203796, 0.879746675491333]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+AA,D,zero,,"[0.9261770844459534, 0.9223092198371888, 0.8724169135093689]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+AAC,0,Zero,,"[0.9210469126701356, 0.9115018248558044, 0.8681054711341858]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+ADC,0,zero,,"[0.924192488193512, 0.9053846597671508, 0.8658601641654968]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+ADP,0,zero,,"[0.9168275594711304, 0.89674973487854, 0.854604959487915]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+APC,,One,,"[0.9193580150604248, 0.6766572594642639, 0.87957364320755]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+APGA,0,zero,True,"[0.8685128092765808, 0.9242239594459534, 0.9071071743965148, 0.8594767451286316]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+APM,0,2ero,,"[0.9303070902824402, 0.9063591957092284, 0.8625342845916748]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+APP,0,2ero,,"[0.9248600006103516, 0.8897232413291931, 0.8574203252792358]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+BP,02,2:enD,,"[0.917794942855835, 0.7709959745407104, 0.8389191627502441]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+LP,217,TWD Seventeen 2:errD hundred and,True,"[0.8144221901893616, 0.7550420165061951, 0.9264326691627502, 0.8973723649978638]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+NNPP,D,2ero,,"[0.9267889857292176, 0.8956651091575623, 0.8552923202514648]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+NRM,0,2ero,,"[0.918228805065155, 0.8992367386817932, 0.8277395963668823]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+PDP,2,TWO,True,"[0.9220303297042848, 0.8424948453903198, 0.8922357559204102, 0.8454499244689941]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+SDP,0,Zero,,"[0.9207998514175416, 0.8901864290237427, 0.8644404411315918]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+YPP,1,one,True,"[0.9109230041503906, 0.8573399782180786, 0.900853991508484, 0.8632787466049194]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
+ZLP,0,Zero,,"[0.9078046679496764, 0.8935214281082153, 0.8620377779006958]",../test_images/batch_test/unwrapped_files_jpg/state_01/lga_01/ward_03/01_01_03_010_unwrap.jpg
