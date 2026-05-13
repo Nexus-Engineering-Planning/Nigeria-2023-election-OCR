@@ -42,3 +42,6 @@ demo/__pycache__/
 
 # Runtime artifacts
 OCR/temp_composite.jpg
+
+# A/B test benchmark outputs — local only
+ab_tests/
